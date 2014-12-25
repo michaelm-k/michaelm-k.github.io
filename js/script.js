@@ -219,7 +219,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
 							}
-							
+							$("#photocap").css("display", "block");
 							$( "#photocap" )
 							.mouseover(function() { 
 								$(this).animate( {color: '#000000'}, 200 ); 		
