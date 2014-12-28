@@ -220,17 +220,51 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 								scrollTop();
 							}
 							$("#photocap").css("display", "block");
-							$( "#photocap" )
-							.mouseover(function() { 
-								$(this).animate( {color: '#000000'}, 200 ); 		
-							})
-							.mouseout(function() {
-								$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
-							});
 							
-							$("#photocap").click(function() {    
-								$(this).stop(true).animate( {color: '#bdbcae'}, 200 );     
-							});
+							//START: TYPER
+							
+							var $el = $('#photocap'),
+							txt = $el.text(),
+							txtLen = txt.length,
+							timeOut,
+							char = 0;
+							
+							$el.text('|');
+							setTimeout(function(){
+								(function typeIt() {   
+									var humanize = Math.round(Math.random() * (200 - 30)) + 30;
+									timeOut = setTimeout(function() {
+										char++;
+										var type = txt.substring(0, char);
+										$el.text(type + '|');
+										typeIt();
+										
+										if (char == txtLen) {
+											$el.text($el.text().slice(0, -1)); // remove the '|'
+											clearTimeout(timeOut);
+										}
+										
+									}, humanize);
+								}());
+							},1000);
+						
+							
+							$('#photocap').animate({opacity:1}, 1000, function() {});
+							
+							//END: TYPER	
+							
+							setTimeout(function(){
+								$("#photocap").attr("href", "http://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
+								$("#photocap").attr("target","_blank");
+								$( "#photocap" )
+								.mouseover(function() { 
+									$(this).animate( {color: '#000000'}, 200 ); 		
+								})
+								.mouseout(function() {
+									$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
+								});
+							},4500);
+							
 						});
 					});
 				});
@@ -255,17 +289,51 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 								scrollTop();
 							}
 							$("#photocap").css("display", "block");
-							$( "#photocap" )
-							.mouseover(function() { 
-								$(this).animate( {color: '#000000'}, 200 ); 		
-							})
-							.mouseout(function() {
-								$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
-							});
 							
-							$("#photocap").click(function() {    
-								$(this).stop(true).animate( {color: '#bdbcae'}, 200 );     
-							});
+							//START: TYPER
+							
+							var $el = $('#photocap'),
+							txt = $el.text(),
+							txtLen = txt.length,
+							timeOut,
+							char = 0;
+							
+							$el.text('|');
+							setTimeout(function(){
+								(function typeIt() {   
+									var humanize = Math.round(Math.random() * (200 - 30)) + 30;
+									timeOut = setTimeout(function() {
+										char++;
+										var type = txt.substring(0, char);
+										$el.text(type + '|');
+										typeIt();
+										
+										if (char == txtLen) {
+											$el.text($el.text().slice(0, -1)); // remove the '|'
+											clearTimeout(timeOut);
+										}
+										
+									}, humanize);
+								}());
+							},1000);
+							
+							
+							$('#photocap').animate({opacity:1}, 1000, function() {});
+							
+							//END: TYPER	
+							
+							setTimeout(function(){
+								$("#photocap").attr("href", "http://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
+								$("#photocap").attr("target","_blank");
+								$( "#photocap" )
+								.mouseover(function() { 
+									$(this).animate( {color: '#000000'}, 200 ); 		
+								})
+								.mouseout(function() {
+									$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
+								});
+							},4500);
+							
 						});
 					});
 				});
