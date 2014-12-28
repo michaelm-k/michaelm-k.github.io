@@ -263,7 +263,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 								.mouseout(function() {
 									$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
 								});
-							},4500);
+							},4000);
 							
 						});
 					});
@@ -332,7 +332,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 								.mouseout(function() {
 									$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
 								});
-							},4500);
+							},4000);
 							
 						});
 					});
