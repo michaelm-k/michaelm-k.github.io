@@ -42,7 +42,7 @@
 			
 			<div class="container pad-container">
 				 <div id = "content">
-					<center><div id="name"><img border="0" src="img/name.gif" class="img-responsive" width="500" height="330"></div></center>	
+					<center><img id="name" border="0" src="img/name.gif" class="img-responsive" width="500" height="330"></center>	
 					<center><a href = "https://genius.com/annotations/13733/standalone_embed" class="writer" target="_blank">This is food for thought – you do the dishes</a></center>
 				</div>									
 								
@@ -72,7 +72,22 @@
 			});
 			function popup(){
 				playerWindow = window.open("player.html", "player", "location=no,width=365,height=487");
-			}			
+			}	
+			
+			//START: http://support.cargocollective.com/customer/portal/questions/1349490-animated-gif-for-header-img-force-gif-to-restart-on-refresh
+			$(function(){
+				// replace src with timestamped url to avoid cache
+				$('#name').hide().attr('src', $('#name').attr('src') + '?_=' + Date.now());
+				
+				// hide the image until the new one has loaded. Otherwise it'll look choppy when the new one loads.
+				$('#name').one('load', function() {
+					$(this).show();
+					}).each(function() {
+					// also fire the function if the image is loaded before the event is bound.
+					if(this.complete) $(this).load();
+				});
+			});		
+			//END			
 		</script>
 		<script src = "js/bootstrap.js"></script>
 		<script src = "js/script.js"></script>
