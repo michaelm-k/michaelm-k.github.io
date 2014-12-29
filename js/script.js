@@ -481,7 +481,8 @@ $( "a.writer" )
     }
     $(this).data("prevType", e.type);
 });
-/* END: LEAVE PAGE */ 
+/* END: LEAVE PAGE */
+$('#name').animate({opacity:1}, 1000, function() {});
 setTimeout(function(){
 $('.navbar-inverse').removeClass('slideIn');
 },15000);
