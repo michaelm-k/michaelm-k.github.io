@@ -448,7 +448,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 setTimeout(function(){
 $( "a.writer" ).css( "cursor", "pointer" );
 $('.writer').animate({opacity:1}, 2000); 
-},15000);
+},15300);
 
 $("a.writer").click(function() {
 	$("a.writer").addClass( 'active' );
@@ -484,7 +484,7 @@ $( "a.writer" )
 /* END: LEAVE PAGE */ 
 setTimeout(function(){
 $('.navbar-inverse').removeClass('slideIn');
-},15000);
+},15300);
 setTimeout(function(){
  $(".static-footer").slideToggle();
-},15450);
+},15750);
