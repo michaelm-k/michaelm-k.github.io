@@ -360,7 +360,6 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 							}
 							
 							hiddenDiv.style.display = 'block';
-							$("#dave").css("display", "");
 							$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
 							
 							$("#badge1").css("display", "");
