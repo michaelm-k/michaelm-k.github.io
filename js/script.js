@@ -346,7 +346,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			$( "#content" ).css( "position", "relative" ); 
 			$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'-110%'}, 2000, function() {
-					$('#content').load('contact.html #content', function() {////CONTACT.HTML 				
+					$('#content').load('contact.html #content', function() {//CONTACT.HTML 				
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
@@ -358,6 +358,10 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
 							}
+							
+							hiddenDiv.style.display = 'block';
+							$("#dave").css("display", "");
+							$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
 							
 							$("#badge1").css("display", "");
 							$("#badge2").css("display", "");
@@ -481,7 +485,7 @@ $( "a.writer" )
     }
     $(this).data("prevType", e.type);
 });
-/* END: LEAVE PAGE */
+/* END: LEAVE PAGE */ 
 $('#name').animate({opacity:1}, 1000, function() {});
 setTimeout(function(){
 $('.navbar-inverse').removeClass('slideIn');
