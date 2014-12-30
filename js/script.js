@@ -350,7 +350,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
-						hiddenDiv.style.display = 'inline-block';
+						hiddenDiv.style.display = 'block';
 						hiddenDiv.style.left = docWidth+'px';
 						$(".custom-wrapper").css("overflow", "hidden");
 						$("#content").stop(true).animate({left:'0px'}, 2000, function(){
@@ -359,18 +359,24 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 								scrollTop();
 							}
 							
-							hiddenDiv.style.display = 'block';
 							$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
 							
-							$("#badge1").css("display", "");
-							$("#badge2").css("display", "");
-							$("#badge3").css("display", "");
-							$("#badge4").css("display", "");
+							$("#badge1li").attr("href", "https://genius.com/marem");
+							$("#badge1li").attr("target","_blank");
 							$("#badge1").stop(true).animate( {opacity: '1'}, 4000); 
-							$("#badge2").stop(true).animate( {opacity: '1'}, 5000); 
-							$("#badge3").stop(true).animate( {opacity: '1'}, 6000); 
-							$("#badge4").stop(true).animate( {opacity: '1'}, 7000); 
 							
+							$("#badge2li").attr("href", "https://ca.linkedin.com/pub/michael-marek/a2/2a1/852");
+							$("#badge2li").attr("target","_blank");
+							$("#badge2").stop(true).animate( {opacity: '1'}, 5000); 
+							
+							$("#badge3li").attr("href", "https://stackoverflow.com/users/3390922/reachmm");
+							$("#badge3li").attr("target","_blank");	
+							$("#badge3").stop(true).animate( {opacity: '1'}, 6000); 
+							
+							$("#badge4li").attr("href", "https://github.com/michaelm-k");
+							$("#badge4li").attr("target","_blank");	
+							$("#badge4").stop(true).animate( {opacity: '1'},7000); 
+
 						});					
 					});
 				});
