@@ -1,7 +1,7 @@
 /* HEADER */
 .navbar-inverse {
   background-color:#3366CC;
-   border-color: #bdbcae;
+  border-color: #bdbcae;
   opacity: 0.95;
 }
 .slideIn {
@@ -15,8 +15,8 @@
 .navbar-inverse .navbar-nav > .active > a:not(#tab2):focus {
   color: #ffffff;
   background-color: #3366CC; 
- text-decoration: underline;
- 
+  text-decoration: underline;
+  cursor:pointer;
 }
 .navbar-inverse .navbar-toggle {
   border-color:#3366CC;
@@ -54,12 +54,14 @@
 .navbar-inverse .navbar-nav > li > a:not(#tab2) {
   color: #ffffff /* text color default */;
   transition-duration: 200ms;
+  cursor:pointer;
   height:55px; 
 }
 .navbar-inverse .navbar-nav > li > a:not(#tab2):hover ,
 .navbar-inverse .navbar-nav > li > a:not(#tab2):focus  {
   color: #bdbcae; /* flash */
-	transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor:pointer;
 }
 .navbar-brand{
 	height:55px;
