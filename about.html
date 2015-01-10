@@ -1,46 +1,7 @@
 <!DOCTYPE html>
-<!-- First off: Shout out to Bootstrap ( http://getbootstrap.com/ ),  Coder's Guide ( http://www.youtube.com/channel/UCwHrYi0GL6dmYaRB0StEbEA ), BootstrapBay ( http://www.youtube.com/channel/UCQ7erinMCeODr6XdPknmj7w ) -->
 <html>
-	<head>
-		<link rel="shortcut icon" type="image/x-icon"  href="img/logo.png" /> 
-		<title>Michael Marek</title>
-		<meta charset="utf-8">
-		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-		<link href = "css/bootstrap.min.css" rel = "stylesheet">
-		<link href = "css/styles.css" rel = "stylesheet">
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>	
-	</head>
-	
 	<body>
 		<div class="custom-wrapper"> 
-			<div class="navbar navbar-inverse navbar-fixed-top slideIn">
-				<div class="container">
-					
-					<a id="music" href = "javascript:popup()" class = "navbar-brand"><i class="fa fa-music fa-lg"></i></a>
-					
-					<div class="navbar-header">
-						<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-					
-					<div class="collapse navbar-collapse navHeaderCollapse">
-		
-						<ul class="nav navbar-nav navbar-right">
-							<li><a id="tab1">About</a></li>
-							<li><a id="tab2" href = "Michael_Marek_Resume.pdf" target="_blank">Résumé</a></li>
-							<li><a id="tab3">Work</a></li>
-							<li><a id="tab4">Contact</a></li>
-							
-						</ul><!-- END: "nav navbar-nav navbar-right" -->
-					</div><!-- END: "collapse navbar-collapse navHeaderCollapse" -->
-				</div><!-- END: "container" -->
-			</div><!-- END: "navbar navbar-inverse navbar-fixed-top" -->
 			<div class="container pad-container">
 				<div id = "content">
 					<h2>ABOUT ME</h2>
@@ -63,52 +24,8 @@
 					
 					</div>
 					
-				<div class="footer static-footer">
-					<div class="container">	
-					
-						<p class="text-muted">© 2014 Michael Marek</p>
-						
-						<div class = "text-primary pull-right">
-						<a href="https://github.com/michaelm-k" target="_blank"><i class = "fa fa-github-alt fa-2x"></i></a>
-						<a href="https://ca.linkedin.com/pub/michael-marek/a2/2a1/852" target="_blank"><i class = "fa fa-linkedin fa-2x" style ="margin:0 0 0 5px"></i></a>
-						<a href="https://stackoverflow.com/users/3390922/reachmm" target="_blank"><i class = "fa fa-stack-overflow fa-2x" style ="margin:0 0 0 5px"></i></a>
-						<a href="https://soundcloud.com/realmarem" target="_blank"><i class = "fa fa-soundcloud fa-2x" style ="margin:0 0 0 5px"></i></a>
-						</div><!-- END: "text-primary pull-right" -->	
-							
-					</div><!-- END: "container" -->	
-				</div><!-- END: "footer static-footer" -->	
+				</div>
 			</div><!-- END: "container pad-container" -->	
 		</div><!-- END: "custom-wrapper" -->	
-		
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-		<script src="js/snowfall.js"></script>
-		<script type="text/javascript">
-            $(document).ready(function() {
-				$(document).snowfall();			
-			});
-			function popup(){
-				playerWindow = window.open("player.html", "player", "location=no,width=365,height=487");
-				window.history.pushState("", "", '/player');
-			}	
-			
-			//START: http://support.cargocollective.com/customer/portal/questions/1349490-animated-gif-for-header-img-force-gif-to-restart-on-refresh
-			$(function(){
-				// replace src with timestamped url to avoid cache
-				$('#name').hide().attr('src', $('#name').attr('src') + '?_=' + Date.now());
-				
-				// hide the image until the new one has loaded. Otherwise it'll look choppy when the new one loads.
-				$('#name').one('load', function() {
-					$(this).show();
-					}).each(function() {
-					// also fire the function if the image is loaded before the event is bound.
-					if(this.complete) $(this).load();
-				});
-			});		
-			//END			
-		</script>
-		<script src = "js/bootstrap.js"></script>
-		<script src = "js/script.js"></script>
-		
 	</body>
 </html>
