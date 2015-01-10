@@ -208,7 +208,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'+110%'}, 2000, function() {
 					$('#content').load('about.html #content', function() {//ABOUT.HTML
-						window.history.pushState("about", "", '/about.html');
+						window.history.replaceState("", "", '/about.html');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
@@ -269,7 +269,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'-110%'}, 2000, function() {
 					$('#content').load('about.html #content', function() {//ABOUT.HTML
-						window.history.pushState("about", "", '/about.html');
+						window.history.replaceState("", "", '/about.html');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
@@ -477,9 +477,80 @@ $( "a.writer" )
 });
 /* END: LEAVE PAGE */ 
 $('#name').animate({opacity:1}, 1000, function() {});
-setTimeout(function(){
-$('.navbar-inverse').removeClass('slideIn');
-},15000);
-setTimeout(function(){
- $(".static-footer").slideToggle();
-},15450);
+
+if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3" || $('li.active a').attr('id') == "tab1") {
+	setTimeout(function(){
+		$("#content").css("display", "none");
+		 $( "#content" ).fadeIn( "slow" );
+		$('.navbar-inverse').removeClass('slideIn');
+		
+		$("html, body").css("overflow", "");
+		
+		//START: #tab1-specific
+		//START: BLINKING CAPTION
+		
+		var $el = $('#photocap'),
+		timeOut,
+		blinkcount = 0;
+		
+		(function blinkIt() {   
+			var humanize = Math.round(Math.random() * (200 - 30)) + 30;
+			timeOut = setTimeout(function() {
+				$($el).animate({opacity:0},200,"linear",function(){
+					$(this).animate({opacity:1},200);
+					blinkcount++;
+				});
+				
+				blinkIt();	
+				if (blinkcount == 2) {
+					clearTimeout(timeOut);
+				}							
+			}, humanize);
+		}());
+		
+		//END: BLINKING CAPTION	
+		setTimeout(function(){
+			$("#photocap").attr("href", "http://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
+			$("#photocap").attr("target","_blank");
+			$( "#photocap" )
+			.mouseover(function() { 
+				$(this).animate( {color: '#000000'}, 200 ); 		
+			})
+			.mouseout(function() {
+				$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
+			});
+		},2000);
+		//END: #tab1specific
+		
+		//START: #tab4-specific
+		$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
+		
+		$("#badge1li").attr("href", "https://genius.com/marem");
+		$("#badge1li").attr("target","_blank");
+		$("#badge1").stop(true).animate( {opacity: '1'}, 4000); 
+		
+		$("#badge2li").attr("href", "https://ca.linkedin.com/pub/michael-marek/a2/2a1/852");
+		$("#badge2li").attr("target","_blank");
+		$("#badge2").stop(true).animate( {opacity: '1'}, 5000); 
+		
+		$("#badge3li").attr("href", "https://stackoverflow.com/users/3390922/reachmm");
+		$("#badge3li").attr("target","_blank");	
+		$("#badge3").stop(true).animate( {opacity: '1'}, 6000); 
+		
+		$("#badge4li").attr("href", "https://github.com/michaelm-k");
+		$("#badge4li").attr("target","_blank");	
+		$("#badge4").stop(true).animate( {opacity: '1'},7000); 
+		//END: #tab4-specific
+	},0);
+	setTimeout(function(){
+		$(".static-footer").slideToggle();
+	},500);
+} else {
+	setTimeout(function(){
+		$('.navbar-inverse').removeClass('slideIn');
+	},15000);
+	setTimeout(function(){
+		$(".static-footer").slideToggle();
+	},15500);
+}
+

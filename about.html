@@ -32,7 +32,8 @@
 					<div class="collapse navbar-collapse navHeaderCollapse">
 		
 						<ul class="nav navbar-nav navbar-right">
-							<li><a id="tab1">About</a></li>
+						
+							<li class = "active"><a id="tab1">About</a></li>
 							<li><a id="tab2" href = "Michael_Marek_Resume.pdf" target="_blank">Résumé</a></li>
 							<li><a id="tab3">Work</a></li>
 							<li><a id="tab4">Contact</a></li>
@@ -41,7 +42,7 @@
 					</div><!-- END: "collapse navbar-collapse navHeaderCollapse" -->
 				</div><!-- END: "container" -->
 			</div><!-- END: "navbar navbar-inverse navbar-fixed-top" -->
-		<div class="custom-wrapper"> 
+			
 			<div class="container pad-container">
 				<div id = "content">
 					<h2>ABOUT ME</h2>
@@ -65,37 +66,51 @@
 					</div>
 					
 				</div>
+			<div class="footer static-footer">
+					<div class="container">	
+					
+						<p class="text-muted">© 2014 Michael Marek</p>
+						
+						<div class = "text-primary pull-right">
+						<a href="https://github.com/michaelm-k" target="_blank"><i class = "fa fa-github-alt fa-2x"></i></a>
+						<a href="https://ca.linkedin.com/pub/michael-marek/a2/2a1/852" target="_blank"><i class = "fa fa-linkedin fa-2x" style ="margin:0 0 0 5px"></i></a>
+						<a href="https://stackoverflow.com/users/3390922/reachmm" target="_blank"><i class = "fa fa-stack-overflow fa-2x" style ="margin:0 0 0 5px"></i></a>
+						<a href="https://soundcloud.com/realmarem" target="_blank"><i class = "fa fa-soundcloud fa-2x" style ="margin:0 0 0 5px"></i></a>
+						</div><!-- END: "text-primary pull-right" -->	
+							
+					</div><!-- END: "container" -->	
+				</div><!-- END: "footer static-footer" -->	
 			</div><!-- END: "container pad-container" -->	
 		</div><!-- END: "custom-wrapper" -->	
-				<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-				<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-				<script src="js/snowfall.js"></script>
-				<script type="text/javascript">
-					$(document).ready(function() {
-						$(document).snowfall();			
-					});
-					function popup(){
-						playerWindow = window.open("player.html", "player", "location=no,width=365,height=487");
-						window.history.pushState("", "", '/player');
-					}	
-					
-					//START: http://support.cargocollective.com/customer/portal/questions/1349490-animated-gif-for-header-img-force-gif-to-restart-on-refresh
-					$(function(){
-						// replace src with timestamped url to avoid cache
-						$('#name').hide().attr('src', $('#name').attr('src') + '?_=' + Date.now());
-						
-						// hide the image until the new one has loaded. Otherwise it'll look choppy when the new one loads.
-						$('#name').one('load', function() {
-							$(this).show();
-							}).each(function() {
-							// also fire the function if the image is loaded before the event is bound.
-							if(this.complete) $(this).load();
-						});
-					});		
-					//END			
-				</script>
-				<script src = "js/bootstrap.js"></script>
-				<script src = "js/script.js"></script>
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+		<script src="js/snowfall.js"></script>
+		<script type="text/javascript">
+            $(document).ready(function() {
+				$(document).snowfall();			
+			});
+			function popup(){
+				playerWindow = window.open("player.html", "player", "location=no,width=365,height=487");
+			}	
+			
+			//START: http://support.cargocollective.com/customer/portal/questions/1349490-animated-gif-for-header-img-force-gif-to-restart-on-refresh
+			$(function(){
+				// replace src with timestamped url to avoid cache
+				$('#name').hide().attr('src', $('#name').attr('src') + '?_=' + Date.now());
 				
-			</body>
-		</html>
+				// hide the image until the new one has loaded. Otherwise it'll look choppy when the new one loads.
+				$('#name').one('load', function() {
+					$(this).show();
+					}).each(function() {
+					// also fire the function if the image is loaded before the event is bound.
+					if(this.complete) $(this).load();
+				});
+			});		
+			//END			
+		</script>
+		<script src = "js/bootstrap.js"></script>
+		<script src = "js/script.js"></script>
+		
+	</body>
+</html>
