@@ -208,7 +208,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'+110%'}, 2000, function() {
 					$('#content').load('about.html #content', function() {//ABOUT.HTML
-						window.history.replaceState("", "", '/about');
+						window.history.replaceState(undefined, undefined, '/about');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
@@ -269,7 +269,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'-110%'}, 2000, function() {
 					$('#content').load('about.html #content', function() {//ABOUT.HTML
-						window.history.replaceState("", "", '/about');
+						window.history.replaceState(undefined, undefined, '/about');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
@@ -331,7 +331,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'-110%'}, 2000, function() {
 					$('#content').load('contact.html #content', function() {//CONTACT.HTML 	
-						window.history.replaceState("", "", '/contact');
+						window.history.replaceState(undefined, undefined, '/contact');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
@@ -374,7 +374,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'+110%'}, 2000, function() {
 					$('#content').load('work.html #content', function() {//WORK.HTML
-						window.history.replaceState("", "", '/contact');
+						window.history.replaceState(undefined, undefined, '/contact');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
@@ -406,7 +406,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'-110%'}, 2000, function() {
 					$('#content').load('work.html #content', function() {//WORK.HTML
-						window.history.replaceState("", "", '/work');
+						window.history.replaceState(undefined, undefined, '/work');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
