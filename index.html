@@ -75,7 +75,7 @@
 			});
 			function popup(){
 				playerWindow = window.open("player.html", "player", "location=no,width=365,height=487");
-				playerWindow.history.pushState("", "", '/player');
+				window.history.pushState("", "", '/player');
 			}	
 			
 			//START: http://support.cargocollective.com/customer/portal/questions/1349490-animated-gif-for-header-img-force-gif-to-restart-on-refresh
