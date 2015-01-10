@@ -208,7 +208,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'+110%'}, 2000, function() {
 					$('#content').load('about.html #content', function() {//ABOUT.HTML
-						window.history.replaceState("", "", '/about');
+						window.history.replaceState("about", "", '/yeeah.html');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
@@ -269,7 +269,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'-110%'}, 2000, function() {
 					$('#content').load('about.html #content', function() {//ABOUT.HTML
-						window.history.replaceState("", "", '/about');
+						window.history.replaceState("about", "", '/yeeah.html');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
