@@ -32,10 +32,10 @@
 					<div class="collapse navbar-collapse navHeaderCollapse">
 		
 						<ul class="nav navbar-nav navbar-right">
-							<li><a id="tab1" href = "#" >About</a></li>
+							<li><a id="tab1">About</a></li>
 							<li><a id="tab2" href = "Michael_Marek_Resume.pdf" target="_blank">Résumé</a></li>
-							<li><a id="tab3" href = "#">Work</a></li>
-							<li><a id="tab4" href = "#" >Contact</a></li>
+							<li><a id="tab3">Work</a></li>
+							<li><a id="tab4">Contact</a></li>
 							
 						</ul><!-- END: "nav navbar-nav navbar-right" -->
 					</div><!-- END: "collapse navbar-collapse navHeaderCollapse" -->
@@ -74,6 +74,7 @@
 				$(document).snowfall();			
 			});
 			function popup(){
+				window.history.pushState("", "", '/player');
 				playerWindow = window.open("player.html", "player", "location=no,width=365,height=487");
 			}	
 			
