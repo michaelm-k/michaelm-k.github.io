@@ -16,7 +16,7 @@ if ($( "#content" ).has( "#name" )){
 	});
 /* END: RESUME LINK */
 
-/* START: SOCIAL ICONS (TODO: FIX REDUNDANCY)*/ 
+/* START: SOCIAL ICONS */ 
 var clicked=0;
 var hovering=0;
 $( ".navbar-inverse .navbar-brand" ).hover(
@@ -41,7 +41,7 @@ $(".navbar-inverse .navbar-brand").click(function() {
 	   
 });
 
-$( ".fa-soundcloud" )
+$( ".fa-soundcloud, .fa-stack-overflow, .fa-github-alt, .fa-linkedin" )
 	.mouseover(function() {  
 		clicked=0;
 		$(this).animate( {color: '#bdbcae'}, "slow" ); 
@@ -52,57 +52,9 @@ $( ".fa-soundcloud" )
 		}	   
 	});
 	
-$(".fa-soundcloud").click(function() {   
+$(".fa-soundcloud, .fa-stack-overflow, .fa-github-alt, .fa-linkedin").click(function() {   
 	clicked=1;	  
 	$(this).stop(true).animate( {color: '#ffffff'}, "slow" );     
-});
-
-$( ".fa-stack-overflow" )
-	.mouseover(function() { 
-		clicked=0;
-		$(this).animate( {color: '#bdbcae'}, "slow" ); 		
-	})
-	.mouseout(function() {
-		if (clicked==0){
-			$(this).stop(true).animate( {color: '#ffffff'}, "slow" ); 
-		}	
-	});
-	
-$(".fa-stack-overflow").click(function() {   
-	clicked=1;	  
-	$(this).stop(true).animate( {color: '#ffffff'}, "slow" );       
-});
-		
-$( ".fa-github-alt" )
-	.mouseover(function() {  
-		clicked=0;
-		$(this).animate( {color: '#bdbcae'}, "slow" ); 
-	})
-	.mouseout(function() {
-		if (clicked==0){
-			$(this).stop(true).animate( {color: '#ffffff'}, "slow" ); 
-		}	 
-	});
-
-$(".fa-github-alt").click(function() {   
-	clicked=1;	  
-	$(this).stop(true).animate( {color: '#ffffff'}, "slow" );       
-});
-	
-$( ".fa-linkedin" )
-	.mouseover(function() {  
-		clicked=0;  
-		$(this).animate( {color: '#bdbcae'}, "slow" ); 
-	})
-	.mouseout(function() {
-		if (clicked==0) {
-			$(this).stop(true).animate( {color: '#ffffff'}, "slow" ); 
-		}	  
-	});
-	
-$(".fa-linkedin").click(function() {   
-	clicked=1;	 
-	$(this).stop(true).animate( {color: '#ffffff'}, "slow" );      
 });
 /* END: SOCIAL ICONS */ 
 
@@ -522,4 +474,3 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 		}		
 	},15500);
 }
-

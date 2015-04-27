@@ -137,21 +137,10 @@ body {
 }
 
 
-.fa-soundcloud{
+.fa-soundcloud, .fa-stack-overflow, .fa-github-alt, .fa-linkedin {
      color: #ffffff;/* (inherit = grey)*/
 }
 
-.fa-stack-overflow{
-     color: #ffffff;
-}
-
-.fa-github-alt{
-	color: #ffffff;
-}
-
-.fa-linkedin{
-	color: #ffffff; 
-}
 /* END: FOOTER */
 
 /* START: HOME */
