@@ -439,6 +439,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 
 /* START: HOME */
 	/* START: SKIP_INTRO */
+	boolean skip=false;
 	$( ".skip_intro" ).css( "cursor", "pointer" );
 	$('.skip_intro').animate({opacity:1}, 2000); 
 
@@ -455,6 +456,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 	});
 	$(".skip_intro").click(function() { 
 		window.history.replaceState("", "", '/about');
+		skip=true;
 	});
 	setTimeout(function(){
 		$('.skip_intro').animate({opacity:0}, 2000);
@@ -504,16 +506,15 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 });
 /* END: LEAVE PAGE */ 
 
-if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3" || $('li.active a').attr('id') == "tab1") {
-		$("#content").css("display", "none");
-		$( "#content" ).fadeIn( "slow" );
-		$('.navbar-inverse').removeClass('slideIn');
+if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3" || $('li.active a').attr('id') == "tab1" || skip==true) {
+	$("#content").css("display", "none");
+	$( "#content" ).fadeIn( "slow" );
+	$('.navbar-inverse').removeClass('slideIn');
 		
-		$("html, body").css("overflow", "");
+	$("html, body").css("overflow", "");
 		
-		//START: #tab1-specific
+	//START: #tab1-specific
 		//START: BLINKING CAPTION
-		
 		var $el = $('#photocap'),
 		timeOut,
 		blinkcount = 0;
@@ -532,8 +533,8 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 				}							
 			}, humanize);
 		}());
-		
 		//END: BLINKING CAPTION	
+		
 		setTimeout(function(){
 			$("#photocap").attr("href", "http://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
 			$("#photocap").attr("target","_blank");
@@ -545,9 +546,9 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 				$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
 			});
 		},2000);
-		//END: #tab1specific
+	//END: #tab1specific
 		
-		//START: #tab4-specific
+	//START: #tab4-specific
 		$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
 		
 		$("#badge1li").attr("href", "https://genius.com/marem");
@@ -565,7 +566,7 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 		$("#badge4li").attr("href", "https://github.com/michaelm-k");
 		$("#badge4li").attr("target","_blank");	
 		$("#badge4").stop(true).animate( {opacity: '1'},7000); 
-		//END: #tab4-specific
+	//END: #tab4-specific
 
 	setTimeout(function(){
 		$(".static-footer").slideToggle();
