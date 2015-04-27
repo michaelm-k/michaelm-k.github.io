@@ -197,6 +197,61 @@ addEvent(window,"load",function(e) {
 });
 /* END: LEAVE WINDOW */
 
+function loadAbout() {
+	//START: BLINKING CAPTION
+	var $el = $('#photocap'),
+	timeOut,
+	blinkcount = 0;
+	
+	(function blinkIt() {   
+		var humanize = Math.round(Math.random() * (200 - 30)) + 30;
+		timeOut = setTimeout(function() {
+			$($el).animate({opacity:0},200,"linear",function(){
+				$(this).animate({opacity:1},200);
+				blinkcount++;
+			});
+			
+			blinkIt();	
+			if (blinkcount == 2) {
+				clearTimeout(timeOut);
+			}							
+		}, humanize);
+	}());
+	//END: BLINKING CAPTION	
+	
+	setTimeout(function(){
+		$("#photocap").attr("href", "http://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
+		$("#photocap").attr("target","_blank");
+		$( "#photocap" )
+		.mouseover(function() { 
+			$(this).animate( {color: '#000000'}, 200 ); 		
+		})
+		.mouseout(function() {
+			$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
+		});
+	},2000);
+}
+
+function loadContact() {
+	$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
+	
+	$("#badge1li").attr("href", "https://genius.com/marem");
+	$("#badge1li").attr("target","_blank");
+	$("#badge1").stop(true).animate( {opacity: '1'}, 4000); 
+	
+	$("#badge2li").attr("href", "https://ca.linkedin.com/pub/michael-marek/a2/2a1/852");
+	$("#badge2li").attr("target","_blank");
+	$("#badge2").stop(true).animate( {opacity: '1'}, 5000); 
+	
+	$("#badge3li").attr("href", "https://stackoverflow.com/users/3390922/reachmm");
+	$("#badge3li").attr("target","_blank");	
+	$("#badge3").stop(true).animate( {opacity: '1'}, 6000); 
+	
+	$("#badge4li").attr("href", "https://github.com/michaelm-k");
+	$("#badge4li").attr("target","_blank");	
+	$("#badge4").stop(true).animate( {opacity: '1'},7000); 
+}
+
 /* START: ABOUT & CONTACT LINKS */
 $(".navbar-inverse .navbar-nav > li > a").click(function() { 
 	$("html, body").css("overflow", "visible");
@@ -222,40 +277,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 							}
 							//$("#photocap").css("display", "block");
 							
-							//START: BLINKING CAPTION
-							
-							var $el = $('#photocap'),
-							timeOut,
-							blinkcount = 0;
-							
-								(function blinkIt() {   
-									var humanize = Math.round(Math.random() * (200 - 30)) + 30;
-									timeOut = setTimeout(function() {
-										$($el).animate({opacity:0},200,"linear",function(){
-										$(this).animate({opacity:1},200);
-										blinkcount++;
-									});
-										
-										blinkIt();	
-										if (blinkcount == 2) {
-											clearTimeout(timeOut);
-										}							
-									}, humanize);
-								}());
-						
-							//END: BLINKING CAPTION	
-							
-							setTimeout(function(){
-								$("#photocap").attr("href", "http://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
-								$("#photocap").attr("target","_blank");
-								$( "#photocap" )
-								.mouseover(function() { 
-									$(this).animate( {color: '#000000'}, 200 ); 		
-								})
-								.mouseout(function() {
-									$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
-								});
-							},2000);
+							loadAbout();
 							
 						});
 					});
@@ -281,43 +303,8 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
 							}
-							//$("#photocap").css("display", "block");
-							
-							//START: BLINKING CAPTION
-							
-							var $el = $('#photocap'),
-							timeOut,
-							blinkcount = 0;
-							
-								(function blinkIt() {   
-									var humanize = Math.round(Math.random() * (200 - 30)) + 30;
-									timeOut = setTimeout(function() {
-										$($el).animate({opacity:0},200,"linear",function(){
-										$(this).animate({opacity:1},200);
-										blinkcount++;
-									});
-										
-										blinkIt();	
-										if (blinkcount == 2) {
-											clearTimeout(timeOut);
-										}							
-									}, humanize);
-								}());
-						
-							//END: BLINKING CAPTION	
-							
-							setTimeout(function(){
-								$("#photocap").attr("href", "http://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
-								$("#photocap").attr("target","_blank");
-								$( "#photocap" )
-								.mouseover(function() { 
-									$(this).animate( {color: '#000000'}, 200 ); 		
-								})
-								.mouseout(function() {
-									$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
-								});
-							},2000);
-							
+							//$("#photocap").css("display", "block");	
+							loadAbout();					
 						});
 					});
 				});
@@ -344,24 +331,8 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 								scrollTop();
 							}
 							
-							$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
+							loadContact();
 							
-							$("#badge1li").attr("href", "https://genius.com/marem");
-							$("#badge1li").attr("target","_blank");
-							$("#badge1").stop(true).animate( {opacity: '1'}, 4000); 
-							
-							$("#badge2li").attr("href", "https://ca.linkedin.com/pub/michael-marek/a2/2a1/852");
-							$("#badge2li").attr("target","_blank");
-							$("#badge2").stop(true).animate( {opacity: '1'}, 5000); 
-							
-							$("#badge3li").attr("href", "https://stackoverflow.com/users/3390922/reachmm");
-							$("#badge3li").attr("target","_blank");	
-							$("#badge3").stop(true).animate( {opacity: '1'}, 6000); 
-							
-							$("#badge4li").attr("href", "https://github.com/michaelm-k");
-							$("#badge4li").attr("target","_blank");	
-							$("#badge4").stop(true).animate( {opacity: '1'},7000); 
-
 						});					
 					});
 				});
@@ -436,10 +407,9 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 	}	
 });
 /* END: ABOUT & CONTACT LINKS */
-
+	
 /* START: HOME */
 	/* START: SKIP_INTRO */
-	var skip=false;
 	$( ".skip_intro" ).css( "cursor", "pointer" );
 	$('.skip_intro').animate({opacity:1}, 2000); 
 
@@ -455,12 +425,23 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 		$(".skip_intro").removeClass( "active" );
 	});
 	$(".skip_intro").click(function() { 
-		window.history.replaceState("", "", '/about');
-		skip=true;
+		$('#content').load('about.html #content', function() {
+			window.history.replaceState("", "", '/about');
+			$("#content").css("display", "none");
+			$( "#content" ).fadeIn( "slow" );
+			$('.navbar-inverse').removeClass('slideIn');		
+			$("html, body").css("overflow", "");
+			loadAbout();
+			setTimeout(function(){
+				$(".static-footer").slideToggle();
+			},500);	
+		});
 	});
 	setTimeout(function(){
 		$('.skip_intro').animate({opacity:0}, 2000);
-		$( ".skip_intro" ).css( "cursor", "default" );	
+		setTimeout(function(){
+			$( ".skip_intro" ).css( "cursor", "default" );	
+		}, 2000);	
 	},15000);
 	/* END:  SKIP_INTRO */
 
@@ -506,68 +487,19 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 });
 /* END: LEAVE PAGE */ 
 
-if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3" || $('li.active a').attr('id') == "tab1" || skip==true) {
+if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3" || $('li.active a').attr('id') == "tab1") {
 	$("#content").css("display", "none");
 	$( "#content" ).fadeIn( "slow" );
-	$('.navbar-inverse').removeClass('slideIn');
-		
+	$('.navbar-inverse').removeClass('slideIn');		
 	$("html, body").css("overflow", "");
 		
 	//START: #tab1-specific
-		//START: BLINKING CAPTION
-		var $el = $('#photocap'),
-		timeOut,
-		blinkcount = 0;
-		
-		(function blinkIt() {   
-			var humanize = Math.round(Math.random() * (200 - 30)) + 30;
-			timeOut = setTimeout(function() {
-				$($el).animate({opacity:0},200,"linear",function(){
-					$(this).animate({opacity:1},200);
-					blinkcount++;
-				});
-				
-				blinkIt();	
-				if (blinkcount == 2) {
-					clearTimeout(timeOut);
-				}							
-			}, humanize);
-		}());
-		//END: BLINKING CAPTION	
-		
-		setTimeout(function(){
-			$("#photocap").attr("href", "http://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
-			$("#photocap").attr("target","_blank");
-			$( "#photocap" )
-			.mouseover(function() { 
-				$(this).animate( {color: '#000000'}, 200 ); 		
-			})
-			.mouseout(function() {
-				$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
-			});
-		},2000);
+		loadAbout();
 	//END: #tab1specific
 		
 	//START: #tab4-specific
-		$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
-		
-		$("#badge1li").attr("href", "https://genius.com/marem");
-		$("#badge1li").attr("target","_blank");
-		$("#badge1").stop(true).animate( {opacity: '1'}, 4000); 
-		
-		$("#badge2li").attr("href", "https://ca.linkedin.com/pub/michael-marek/a2/2a1/852");
-		$("#badge2li").attr("target","_blank");
-		$("#badge2").stop(true).animate( {opacity: '1'}, 5000); 
-		
-		$("#badge3li").attr("href", "https://stackoverflow.com/users/3390922/reachmm");
-		$("#badge3li").attr("target","_blank");	
-		$("#badge3").stop(true).animate( {opacity: '1'}, 6000); 
-		
-		$("#badge4li").attr("href", "https://github.com/michaelm-k");
-		$("#badge4li").attr("target","_blank");	
-		$("#badge4").stop(true).animate( {opacity: '1'},7000); 
+		loadContact();
 	//END: #tab4-specific
-
 	setTimeout(function(){
 		$(".static-footer").slideToggle();
 	},500);

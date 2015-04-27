@@ -171,9 +171,13 @@ a.writer.active{
 }
 .skip_intro{
 	opacity:0;
+	text-decoration:none;
+	color: #000000;
+	cursor: default;
 	font-size: 150%;
 }
 .skip_intro.active{
 	color:#3366CC;	
+	text-decoration:none;
 }
 /* END: HOME */
