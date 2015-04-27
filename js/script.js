@@ -439,7 +439,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 
 /* START: HOME */
 	/* START: SKIP_INTRO */
-	boolean skip=false;
+	var skip=false;
 	$( ".skip_intro" ).css( "cursor", "pointer" );
 	$('.skip_intro').animate({opacity:1}, 2000); 
 
