@@ -410,6 +410,8 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 	
 /* START: HOME */
 	/* START: SKIP_INTRO */
+	var skipped=false;
+	var tooLatetoSkip=false;
 	$( ".skip_intro" ).css( "cursor", "pointer" );
 	$('.skip_intro').animate({opacity:1}, 2000); 
 
@@ -425,23 +427,27 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 		$(".skip_intro").removeClass( "active" );
 	});
 	$(".skip_intro").click(function() { 
-		$('#content').load('about.html #content', function() {
-			window.history.replaceState("", "", '/about');
-			$("#content").css("display", "none");
-			$( "#content" ).fadeIn( "slow" );
-			$('.navbar-inverse').removeClass('slideIn');		
-			$("html, body").css("overflow", "");
-			loadAbout();
-			setTimeout(function(){
-				$(".static-footer").slideToggle();
-			},500);	
-		});
+		if (tooLatetoSkip==false){
+			skipped=true;
+			$('#content').load('about.html #content', function() {
+				window.history.replaceState("", "", '/about');		
+				$("#content").css("display", "none");
+				$( "#content" ).fadeIn( "slow" );
+				$('.navbar-inverse').removeClass('slideIn');		
+				$("html, body").css("overflow", "");
+				loadAbout();
+				$("#tab1").parent().addClass('active');
+				setTimeout(function(){
+					$(".static-footer").slideToggle();
+				},500);	
+			});
+		}	
 	});
+	
 	setTimeout(function(){
+		tooLatetoSkip=true;
 		$('.skip_intro').animate({opacity:0}, 2000);
-		setTimeout(function(){
-			$( ".skip_intro" ).css( "cursor", "default" );	
-		}, 2000);	
+		$( ".skip_intro" ).css( "cursor", "default" );	
 	},15000);
 	/* END:  SKIP_INTRO */
 
@@ -500,15 +506,20 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 	//START: #tab4-specific
 		loadContact();
 	//END: #tab4-specific
+
 	setTimeout(function(){
 		$(".static-footer").slideToggle();
 	},500);
 } else {
 	setTimeout(function(){
-		$('.navbar-inverse').removeClass('slideIn');
+		if (skipped==false) {
+			$('.navbar-inverse').removeClass('slideIn');
+		}		
 	},15000);
 	setTimeout(function(){
-		$(".static-footer").slideToggle();
+		if (skipped==false) {
+			$(".static-footer").slideToggle();
+		}		
 	},15500);
 }
 
