@@ -10,9 +10,9 @@
 
 .navbar {transition:all 1s ease-in-out}
 
-.navbar-inverse .navbar-nav > .active > a:not(#tab2),
-.navbar-inverse .navbar-nav > .active > a:not(#tab2):hover,
-.navbar-inverse .navbar-nav > .active > a:not(#tab2):focus {
+.navbar-inverse .navbar-nav > .active > a:not(#tab2):not(#tab5),
+.navbar-inverse .navbar-nav > .active > a:not(#tab2):not(#tab5):hover,
+.navbar-inverse .navbar-nav > .active > a:not(#tab2):not(#tab5):focus {
   color: #ffffff;
   background-color: #3366CC; 
   text-decoration: underline;
@@ -46,19 +46,19 @@
 .navbar-inverse .navbar-form {
   border-color: #ffffff; /* line separator nav from drop-down*/
 }
-#tab2{
+#tab2, #tab5{
 	color:#ffffff;
 	background-color: #3366CC; 
 	 height:55px; 
 }
-.navbar-inverse .navbar-nav > li > a:not(#tab2) {
+.navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5) {
   color: #ffffff /* text color default */;
   transition-duration: 200ms;
   cursor:pointer;
   height:55px; 
 }
-.navbar-inverse .navbar-nav > li > a:not(#tab2):hover ,
-.navbar-inverse .navbar-nav > li > a:not(#tab2):focus  {
+.navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5):hover ,
+.navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5):focus  {
   color: #bdbcae; /* flash */
   transition-duration: 200ms;
   cursor:pointer;

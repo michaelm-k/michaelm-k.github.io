@@ -3,7 +3,7 @@ if ($( "#content" ).has( "#name" )){
 }
 
 /* START: RESUME LINK */
-	$( "#tab2" )
+	$( "#tab2, #tab5" )
 	.mouseover(function() { 
 		$(this).animate( {color: '#bdbcae'}, 200 ); 		
 	})
@@ -11,7 +11,7 @@ if ($( "#content" ).has( "#name" )){
 			$(this).stop(true).animate( {color: '#ffffff'}, 200 ); 			
 	});
 	
-	$("#tab2").click(function() {    
+	$("#tab2, #tab5").click(function() {    
 		$(this).stop(true).animate( {color: '#ffffff'}, 200 );     
 	});
 /* END: RESUME LINK */
@@ -207,7 +207,7 @@ function loadContact() {
 /* START: ABOUT & CONTACT LINKS */
 $(".navbar-inverse .navbar-nav > li > a").click(function() { 
 	$("html, body").css("overflow", "visible");
-	if (!$(event.target).closest("#tab2").length) {	
+	if (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length) {	
 		if ($(event.target).closest("#tab1").length && !$(this).closest('li').hasClass( "active" )) {
 			if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3") {
 				event.preventDefault();
