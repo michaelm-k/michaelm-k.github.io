@@ -222,7 +222,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						hiddenDiv.style.display = 'inline-block';
 						hiddenDiv.style.left = -docWidth + "px";
 						$(".custom-wrapper").css("overflow", "hidden");
-						$("#content").stop(true).animate({left:'0px'}, 2000, function(){
+						$("#content").animate({left:'0px'}, 2000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit
 														
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
@@ -250,7 +250,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						hiddenDiv.style.display = 'inline-block';
 						hiddenDiv.style.left = docWidth+'px';
 						$(".custom-wrapper").css("overflow", "hidden");
-						$("#content").stop(true).animate({left:'0px'}, 2000, function() {
+						$("#content").animate({left:'0px'}, 2000, function() {
 													
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
@@ -277,7 +277,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						hiddenDiv.style.display = 'block';
 						hiddenDiv.style.left = docWidth+'px';
 						$(".custom-wrapper").css("overflow", "hidden");
-						$("#content").stop(true).animate({left:'0px'}, 2000, function(){
+						$("#content").animate({left:'0px'}, 2000, function(){
 							
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
@@ -313,7 +313,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 							$(this).stop(true).animate( {opacity: '0.5'}, 1000 ); 			
 						});
 						
-						$("#content").stop(true).animate({left:'0px'}, 2000, function() {
+						$("#content").animate({left:'0px'}, 2000, function() {
 							
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
@@ -345,7 +345,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 							$(this).stop(true).animate( {opacity: '0.5'}, 1000 ); 			
 						});
 
-						$("#content").stop(true).animate({left:'0px'}, 2000, function() {
+						$("#content").animate({left:'0px'}, 2000, function() {
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
 							}		
