@@ -262,4 +262,18 @@ a.writer.active{
 		padding-left:15px;
 		padding-right:15px;
 	}
+	#blogimg,#dave{
+		margin:0 0 0 0;
+		float:none;padding-left:0;
+	}
+	#dave{padding-bottom:20px;}
+	
 }
+@media screen and (max-width: 675px){
+	.aboutimg #photocap{
+		padding-left:0;
+	}
+	.aboutimg{margin: 0 0 0 0; float:right;padding-left:0;}
+	.aboutimg #img {padding-left:0;}
+}
+
