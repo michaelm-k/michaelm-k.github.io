@@ -273,11 +273,11 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						$(".custom-wrapper").css("overflow", "hidden");
 						$("#content").animate({left:'0px'}, 2000, function(){
 							
+							
+							loadContact();
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
 							}
-							
-							loadContact();
 							
 						});					
 					});
