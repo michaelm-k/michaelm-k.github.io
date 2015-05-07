@@ -193,8 +193,6 @@ function loadWork() {
 	});
 }
 function loadContact() {
-	$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
-	
 	$('#content-text .fa-university, #content-text .fa-stack-overflow, #content-text .fa-linkedin-square, #content-text .fa-github-square').addClass('animated rubberBand');
 }
 
