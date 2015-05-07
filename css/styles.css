@@ -183,7 +183,7 @@ a.writer.active{
 .aboutimg #img{
 	width:500px;height:auto;float:right;clear:right;margin:0 0 0 20px;
 }
-.aboutimg#photocap{
+.aboutimg #photocap{
 	width:157px;display:block;text-decoration: none;color: #bdbcae;font-style:italic;opacity:0;margin:0 0 0 20px;
 }
 
