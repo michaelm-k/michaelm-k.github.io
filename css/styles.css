@@ -202,32 +202,23 @@ a.writer.active{
 	color:#000000;
 }
 #blogimg {
-	width:500px;height:auto;float:right;clear:right;margin:0 0 20px 20px;
+	width:500px;height:auto;float:right;clear:right;margin:0 0 30px 30px;
 }
 #websiteimg {
-	width:500px;height:auto;float:left;clear:left;margin:0 20px 20px 0;
+	width:500px;height:auto;float:left;clear:left;margin:0 30px 30px 0;
 }
 
 #drinkcup{
-	height:auto;width:500px;float:right;clear:right;margin:0 0 20px 20px;
+	height:auto;width:500px;float:right;clear:right;margin:0 0 30px 30px;
 }
 
 #storyimg {
-	cursor:zoom-in;height:300px;width:250px;opacity:0.5;float:left;margin:0 20px 20px 0;
+	cursor:zoom-in;height:300px;width:250px;opacity:0.5;float:left;margin:0 30px 30px 0;
 }
 
 #dave{
-	float:right; width:500px; height:auto; margin:0 0 20px 0;opacity:0;
 }
-#badge1,#badge4{
-	margin-top:20px;float:left;opacity:0;
-}
-#badge2{
-	margin-top:20px;float:left;margin-right:20px;margin-left:20px;opacity:0;
-}
-#badge3{
-	margin-top:20px;float:left;margin-right:20px;opacity:0;
-}
+
 @media screen and (max-width: 575px){
 	.aboutimg, .aboutimg #img, .aboutimg #photocap {
 		padding-left:0;
@@ -259,10 +250,8 @@ a.writer.active{
 }
 @media screen and (max-width:767px){
 	#blogimg,#dave{
-		margin:0 0 0 0;
 		float:none;padding-left:0;
 	}
-	#dave{padding-bottom:20px;}
 	
 }
 @media screen and (max-width: 675px){
