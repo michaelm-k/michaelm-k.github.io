@@ -7,11 +7,13 @@
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 		
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>	
 		<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>	
+		<link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet' type='text/css'>
 		
-		<link href="css/bootstrap.css" rel = "stylesheet">
-		<link href="css/styles.css" rel = "stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	
@@ -34,11 +36,11 @@
 		
 						<ul class="nav navbar-nav navbar-right">
 						
-							<li><a id="tab1">About</a></li>
-							<li><a id="tab2" href = "Michael_Marek_Resume.pdf" target="_blank">Résumé</a></li>
-							<li class = "active"><a id="tab3">Work</a></li>
-							<li><a id="tab5" href = "https://michaelxdave.herokuapp.com" target="_blank">Blog</a></li>
-							<li><a id="tab4">Contact</a></li>
+							<li><a id="tab1">ABOUT</a></li>
+							<li><a id="tab2" href = "Michael_Marek_Resume.pdf" target="_blank">RESUME</a></li>
+							<li class = "active"><a id="tab3">PROJECTS</a></li>
+							<li><a id="tab5" href = "https://michaelxdave.herokuapp.com" target="_blank">BLOG</a></li>
+							<li><a id="tab4">CONTACT</a></li>
 							
 						</ul><!-- END: "nav navbar-nav navbar-right" -->
 					</div><!-- END: "collapse navbar-collapse navHeaderCollapse" -->
@@ -49,34 +51,66 @@
 			
 				<div id = "content">
 				
-					<h2>WORK</h2>
+					<h2>Projects</h2>
 					<hr>
-				
-					<div>
-					<a href="Michael_Marek_Beneath_the_Sleeve.pdf" target="_blank"><img id='storyimg' src="img/story.png" class="img-responsive"></a>
-					<h3 id="projectheading"><strong>Published Short Story</strong></h3>
-					<p>Although not noticeably coding-related, I felt like including this story here because I've often been reminded of the process of creating it when trying to realize certain ideas into code. There have been times when I've written stuff like, "Yeah, looks good. We've got something here." And then, after playing it back to myself, I'm left thinking, "Yeah.. that's not what I meant. But whatever; it works." The parallels are certainly worthy to note.</p>
-					<p>Anyway, I submitted this story back in Grade 12 for the <a href="http://www.polarexpressions.ca/index.html" target="_blank"><i>Polar Expressions Publishing</i></a> <strong>2013/2014 National Student Poetry and Short-Story Contest</strong>, and they were kind enough to publish it! So, shout out to them.</p>									
-					<hr style="clear:left">
-					</div>
-				
+					
 					<div>			
-					<a href="img/website.png" target="_blank"><img id="websiteimg" src="img/website.png" class="img-responsive"></a>
-					<a href="img/website_backend.png" target="_blank"><img id="websiteimg" src="img/website_backend.png" class="img-responsive"></a>
-					<h3 id="projectheading"><strong>This Website</strong><a href="https://github.com/michaelm-k/michaelm-k.github.io" target="_blank" ><img id="githubfav" src="img/github_favicon.ico" hspace="10"></a></h3>
-					<p>For a lot of people, making a website is next-to-near the last thing on their list of things to do, which is understandable, since a website doesn't serve much of a purpose if you've got nothing to put on it. However, as someone whose portfolio wasn't in too-good-a shape during the summer of '14, I figured, "Hey, what if I flip the script a little and make a website first, with almost nothing to put on it? That way, each time I'll look at it, I'll be like, "Sh!t – I got some work to do," thus being that much more motivated to create something for it. That was essentially my philosophy... Between you and me though, theory trumped practice. But, for someone who hadn't been exposed to HTML and CSS prior to the summer, I explored, and became more appreciative of, some of the web's finer details – and, had fun doing so!</p>
-					<p>Now, onto how I made it. One of my earliest visions for the site was to have an animation that wrote something in cursive. Unfortunately, that was a pretty bold vision for a noob. Thus, I regressed a little: momentarily returning to my roots: MS Paint. After about a thousand takes, I finally got tired and decided to stick with what's there now. It was frustrating to say the least, and it didn't help that LICEcap (no disrespect) occasionally skipped on me, resulting in OCD-triggering white spots. Uhhh.</p>
-					<p>Apart from that, I really just exploited the responsive and aesthetically pleasing qualities of Bootstrap to my benefit. Along the way however, I systematically severed a few of my ties to Bootstrap just to gain a little more control over how the site responded to the user's unpredictable nature - I spent some time on a few unnecessary nuances, really.</p>		
-					<p>Snow – courtesy of <a href="http://www.somethinghitme.com/author/admin/" target="_blank">Loktar</a>.</p>
-					<p><strong>Note**</strong> I apologize if your user experience has been negatively impacted by the browser-related shortcomings of this site. I am currently trying to fix them!</p>
-					<hr style="clear:right">
+						<img id="blogimg" src="img/blog.png" class="img-responsive">
+						
+						<div id="content-text">
+							<h3 id="projectheading"><a href="https://michaelxdave.herokuapp.com" target="_blank"><strong>michael x dave</strong></a></h3>
+							<h4>Django, HTML, CSS, JS</h4>
+							
+							<p>A personal blogging application.</p>
+							
+							<p>After a few months of holding my blog on WordPress, I decided to take control of my content and build a blog site from scratch, ultimately adapting and putting my own spin on the <a href="https://wordpress.com/themes/eighties/" target="_blank">Eighties</a> WordPress theme. As it stands, the actual blogging is a two-step process, as I first create and save my posts locally on Django's built-in SQlite database server, and then I push them to Heroku.</p>		
+						</div>
+						
+						<hr style="clear:right">
+					</div>
+					
+					<div>			
+						<img id="websiteimg" src="img/website.png" class="img-responsive">
+					
+						<div id="content-text">
+							<h3 id="projectheading"><strong>This Website</strong> <a href="https://github.com/michaelm-k/michaelm-k.github.io" target="_blank"><i class="fa fa-github"></i></a></h3>
+							<h4>AJAX, HTML, CSS, JS</h4>
+							
+							<p> My introduction to web development.</p>
+							
+							<p>An animation-heavy, Bootstrapped static website that uses AJAX principles to asynchronously load content (i.e., no page refresh necessary!).</p>
+							
+						</div>
+						
+						<hr style="clear:left">
 					</div>
 				
 					<div>
-					<a href="img/drinking_game.png" target="_blank"><img id="drinkcup" src="img/drinking_game.png" class="img-responsive"></a>
-					<h3 id="projectheading"><strong>Drink / Cup</strong><a href="https://github.com/michaelm-k/Drink-Cup" target="_blank" ><img id="githubfav" src="img/github_favicon.ico" hspace="10"></a></h3>
-					<p>To maximize my productivity in 1A, I spent my very limited downtime creating an app that simulated the filling of an MS-Word glass with suspicious liquids of your choosing. After stumbling across a <a href="https://stackoverflow.com/questions/13772063/reveal-image-underneath-a-mask-css-javascript" target="_blank">Stack Overflow page</a> that implemented what I consider CSS magic, I just had to do it. I also have to thank Brian Grinstead for his <a href="https://bgrins.github.io/spectrum/" target="_blank"><i>spectrum</i> colorpicker</a>, which is the reason the user can even get creative with it.</p>
-					<p><i>Play it <a href="http://michaelm-k.github.io/Drink-Cup" target="_blank">here</a></i>.</p>
+						<img id="drinkcup" src="img/drinking_game.png" class="img-responsive">
+						
+						<div id="content-text">
+							<a href="http://michaelm-k.github.io/Drink-Cup" target="_blank"><h3 id="projectheading"><strong>Drink / Cup</strong></a> <a href="https://github.com/michaelm-k/Drink-Cup" target="_blank"><i class="fa fa-github"></i></a></h3>
+							<h4>HTML, CSS, JS</h4>
+							
+							<p>An exercise of minimalisim, to say the least.
+							
+							<p>After stumbling across a <a href="https://stackoverflow.com/questions/13772063/reveal-image-underneath-a-mask-css-javascript" target="_blank">Stack Overflow page</a> that showed how to use CSS to simulate a glass being filled with water, I felt like further sharpening my CSS skills by implementing the animation myself with a little more functionality: a <a href="https://bgrins.github.io/spectrum/" target="_blank">spectrum colorpicker</a> so that you can get creative with the colours you drink xD.</p>
+						</div>
+						
+						<hr style="clear:right">
+					</div>
+					
+					<div>
+						<a href="Michael_Marek_Beneath_the_Sleeve.pdf" target="_blank"><img id='storyimg' src="img/story.png" class="img-responsive"></a>
+						
+						<div id="content-text">
+							<h3 id="projectheading"><a href="Michael_Marek_Beneath_the_Sleeve.pdf" target="_blank"><strong>Published Short Story</strong></a></h3>
+							<h4>English</h4>
+							
+							<p>Not coding-related, per se, but worth including nevertheless!</p>
+							<p>I submitted this story back in Grade 12 for the <a href="http://www.polarexpressions.ca/index.html" target="_blank">Polar Expressions Publishing</a> <strong>2013/2014 National Student Poetry and Short-Story Contest</strong>, and they were kind enough to publish it! So, shout out to them.</p>										
+							<p><i>Psst</i>. You can also click on the image to read the story.
+						</div>	
 					</div>
 				
 				</div>
@@ -84,11 +118,11 @@
 				<div class="footer static-footer">
 					<div class="container">	
 						
-						<p class="text-muted">© 2015 Michael Marek</p>
+						<p class="text-muted">© 2015 MICHAEL MAREK</p>
 						
 						<div class = "text-primary pull-right">
 							<a href="https://github.com/michaelm-k" target="_blank"><i class = "fa fa-github-alt fa-2x"></i></a>
-							<a href="https://ca.linkedin.com/pub/michael-marek/a2/2a1/852" target="_blank"><i class = "fa fa-linkedin fa-2x"></i></a>
+							<a href="https://ca.linkedin.com/in/michaelmarek96" target="_blank"><i class = "fa fa-linkedin fa-2x"></i></a>
 							<a href="https://stackoverflow.com/users/3390922/reachmm" target="_blank"><i class = "fa fa-stack-overflow fa-2x"></i></a>
 							<a href="https://soundcloud.com/realmarem" target="_blank"><i class = "fa fa-soundcloud fa-2x"></i></a>
 						</div><!-- END: "text-primary pull-right" -->	

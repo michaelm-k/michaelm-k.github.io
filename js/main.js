@@ -41,7 +41,7 @@ $(".navbar-inverse .navbar-brand").click(function() {
 	   
 });
 
-$( ".fa-soundcloud, .fa-stack-overflow, .fa-github-alt, .fa-linkedin" )
+$( ".static-footer .fa-soundcloud, .static-footer .fa-stack-overflow, .static-footer .fa-github-alt, .static-footer .fa-linkedin" )
 	.mouseover(function() {  
 		clicked=0;
 		$(this).animate( {color: '#bdbcae'}, "slow" ); 
@@ -52,7 +52,7 @@ $( ".fa-soundcloud, .fa-stack-overflow, .fa-github-alt, .fa-linkedin" )
 		}	   
 	});
 	
-$(".fa-soundcloud, .fa-stack-overflow, .fa-github-alt, .fa-linkedin").click(function() {   
+$(".static-footer .fa-soundcloud, .static-footer .fa-stack-overflow, .static-footer .fa-github-alt, .static-footer .fa-linkedin").click(function() {   
 	clicked=1;	  
 	$(this).stop(true).animate( {color: '#ffffff'}, "slow" );     
 });
@@ -183,25 +183,19 @@ function loadAbout() {
 		});
 	},2000);
 }
-
+function loadWork() {
+	$( "#storyimg" )
+	.mouseover(function() { 
+		$(this).animate( {opacity: '1'}, 1000 ); 		
+	})
+	.mouseout(function() {
+		$(this).stop(true).animate( {opacity: '0.5'}, 1000 ); 			
+	});
+}
 function loadContact() {
 	$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
 	
-	$("#badge1li").attr("href", "https://genius.com/marem");
-	$("#badge1li").attr("target","_blank");
-	$("#badge1").stop(true).animate( {opacity: '1'}, 4000); 
-	
-	$("#badge2li").attr("href", "https://ca.linkedin.com/pub/michael-marek/a2/2a1/852");
-	$("#badge2li").attr("target","_blank");
-	$("#badge2").stop(true).animate( {opacity: '1'}, 5000); 
-	
-	$("#badge3li").attr("href", "https://stackoverflow.com/users/3390922/reachmm");
-	$("#badge3li").attr("target","_blank");	
-	$("#badge3").stop(true).animate( {opacity: '1'}, 6000); 
-	
-	$("#badge4li").attr("href", "https://github.com/michaelm-k");
-	$("#badge4li").attr("target","_blank");	
-	$("#badge4").stop(true).animate( {opacity: '1'},7000); 
+	$('#content-text .fa-university, #content-text .fa-stack-overflow, #content-text .fa-linkedin-square, #content-text .fa-github-square').addClass('animated rubberBand');
 }
 
 /* START: ABOUT & CONTACT LINKS */
@@ -305,13 +299,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						hiddenDiv.style.left = -docWidth + "px";
 						$(".custom-wrapper").css("overflow", "hidden");
 						
-						$( "#storyimg" )
-						.mouseover(function() { 
-							$(this).animate( {opacity: '1'}, 1000 ); 		
-						})
-						.mouseout(function() {
-							$(this).stop(true).animate( {opacity: '0.5'}, 1000 ); 			
-						});
+						loadWork();
 						
 						$("#content").animate({left:'0px'}, 2000, function() {
 							
@@ -337,13 +325,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						hiddenDiv.style.left = docWidth + "px";
 						$(".custom-wrapper").css("overflow", "hidden");
 						
-						$( "#storyimg" )
-						.mouseover(function() { 
-							$(this).animate( {opacity: '1'}, 1000 ); 		
-						})
-						.mouseout(function() {
-							$(this).stop(true).animate( {opacity: '0.5'}, 1000 ); 			
-						});
+						loadWork();
 
 						$("#content").animate({left:'0px'}, 2000, function() {
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
@@ -454,7 +436,11 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 	//START: #tab1-specific
 		loadAbout();
 	//END: #tab1specific
-		
+	
+	//START: #tab3-specific
+		loadWork();
+	//END: #tab3-specific
+	
 	//START: #tab4-specific
 		loadContact();
 	//END: #tab4-specific
