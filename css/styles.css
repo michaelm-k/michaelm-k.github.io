@@ -1,6 +1,6 @@
 /* START: HEADER */
 .navbar-inverse {
-  background-color:#3366CC;
+  background-color:#3B5998;
   border-color: #bdbcae;
   opacity: 0.95;
   font-family: 'Lato', sans-serif;	
@@ -15,30 +15,30 @@
 .navbar-inverse .navbar-nav > .active > a:not(#tab2):not(#tab5):hover,
 .navbar-inverse .navbar-nav > .active > a:not(#tab2):not(#tab5):focus {
   color: #ffffff;
-  background-color: #3366CC; 
+  background-color: #3B5998; 
   /*text-decoration: underline;*/
   cursor:pointer;
 }
 .navbar-inverse .navbar-toggle {
-  border-color:#3366CC;
-  background-color: #3366CC;	
+  border-color:#3B5998;
+  background-color: #3B5998;	
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #3366CC;
+  background-color: #3B5998;
 }
 .menu {
-	border-color:#3366CC;
-	background-color: #3366CC;	
+	border-color:#3B5998;
+	background-color: #3B5998;	
 }
 .menuHover {
-  background-color: #3366CC;
+  background-color: #3B5998;
 	-webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 	-moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 	box-shadow: inset 0px 0px 7px #ffffff;
 }
 .menuActive{
-	background-color: #3366CC;
+	background-color: #3B5998;
 	-webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 	-moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 	box-shadow: inset 0px 0px 7px #3D3D3D;
@@ -49,7 +49,7 @@
 }
 #tab2, #tab5{
 	color:#ffffff;
-	background-color: #3366CC; 
+	background-color: #3B5998; 
 	 height:55px; 
 }
 .navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5) {
@@ -78,7 +78,7 @@ span {
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse
 .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
-background-color: #3366CC;
+background-color: #3B5998;
 color: #ffffff;
 }
 
@@ -125,7 +125,7 @@ body {
    left:0;
    width:100%;
    height:50px;   /* height of the footer */
-   background:#3366CC;  
+   background:#3B5998;  
    display:none;
    font-family: 'Lato', sans-serif;	
 }
@@ -157,7 +157,7 @@ a.writer {
 	font-size: 150%;
 }
 a.writer.active{
-	 color:#3366CC;	 
+	 color:#3B5998;	 
 }
 #content{
 	font-family: 'Adamina', serif;
@@ -173,7 +173,7 @@ a.writer.active{
 	font-size: 150%;
 }
 .skip_intro.active{
-	color:#3366CC;	
+	color:#3B5998;	
 	text-decoration:none;
 }
 /* END: HOME */
