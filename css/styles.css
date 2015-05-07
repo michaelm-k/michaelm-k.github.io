@@ -258,10 +258,6 @@ a.writer.active{
 	margin:0 0 0 15px;
 }
 @media screen and (max-width:767px){
-	#content{
-		padding-left:7px;
-		padding-right:7px;
-	}
 	#blogimg,#dave{
 		margin:0 0 0 0;
 		float:none;padding-left:0;
