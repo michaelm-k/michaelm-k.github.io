@@ -193,7 +193,7 @@ function loadWork() {
 	});
 }
 function loadContact() {
-	$("#dave").stop(true).animate( {opacity: '1'}, 4000); 
+	$("#dave").stop(true).animate( {opacity: '1'}, 2000); 
 	
 	$('#content-text .fa-university, #content-text .fa-stack-overflow, #content-text .fa-linkedin-square, #content-text .fa-github-square').addClass('animated rubberBand');
 }
@@ -207,7 +207,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				event.preventDefault();
 				$( "#content" ).css( "position", "relative" ); 
 				$(".custom-wrapper").css("overflow", "hidden");
-				$("#content").stop(true).animate({left:'+110%'}, 2000, function() {
+				$("#content").stop(true).animate({left:'+110%'}, 1000, function() {
 					$('#content').load('about.html #content', function() {//ABOUT.HTML
 						window.history.replaceState("", "", '/about');
 						var hiddenDiv = document.getElementById('content');
@@ -216,7 +216,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						hiddenDiv.style.display = 'inline-block';
 						hiddenDiv.style.left = -docWidth + "px";
 						$(".custom-wrapper").css("overflow", "hidden");
-						$("#content").animate({left:'0px'}, 2000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit
+						$("#content").animate({left:'0px'}, 1000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit
 														
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
@@ -235,7 +235,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				event.preventDefault();
 				$( "#content" ).css( "position", "relative" ); 
 				$(".custom-wrapper").css("overflow", "hidden");
-				$("#content").stop(true).animate({left:'-110%'}, 2000, function() {
+				$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
 					$('#content').load('about.html #content', function() {//ABOUT.HTML
 						window.history.replaceState("", "", '/about');
 						var hiddenDiv = document.getElementById('content');
@@ -244,7 +244,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						hiddenDiv.style.display = 'inline-block';
 						hiddenDiv.style.left = docWidth+'px';
 						$(".custom-wrapper").css("overflow", "hidden");
-						$("#content").animate({left:'0px'}, 2000, function() {
+						$("#content").animate({left:'0px'}, 1000, function() {
 													
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
@@ -262,7 +262,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			event.preventDefault();
 			$( "#content" ).css( "position", "relative" ); 
 			$(".custom-wrapper").css("overflow", "hidden");
-				$("#content").stop(true).animate({left:'-110%'}, 2000, function() {
+				$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
 					$('#content').load('contact.html #content', function() {//CONTACT.HTML 	
 						window.history.replaceState("", "", '/contact');
 						var hiddenDiv = document.getElementById('content');
@@ -271,7 +271,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						hiddenDiv.style.display = 'block';
 						hiddenDiv.style.left = docWidth+'px';
 						$(".custom-wrapper").css("overflow", "hidden");
-						$("#content").animate({left:'0px'}, 2000, function(){
+						$("#content").animate({left:'0px'}, 1000, function(){
 							
 							
 							loadContact();
@@ -289,7 +289,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				event.preventDefault();
 				$( "#content" ).css( "position", "relative" ); 
 				$(".custom-wrapper").css("overflow", "hidden");
-				$("#content").stop(true).animate({left:'+110%'}, 2000, function() {
+				$("#content").stop(true).animate({left:'+110%'}, 1000, function() {
 					$('#content').load('work.html #content', function() {//WORK.HTML
 						window.history.replaceState("", "", '/work');
 						var hiddenDiv = document.getElementById('content');
@@ -301,7 +301,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						
 						loadWork();
 						
-						$("#content").animate({left:'0px'}, 2000, function() {
+						$("#content").animate({left:'0px'}, 1000, function() {
 							
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
@@ -315,7 +315,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				event.preventDefault();
 				$( "#content" ).css( "position", "relative" ); 
 				$(".custom-wrapper").css("overflow", "hidden");
-				$("#content").stop(true).animate({left:'-110%'}, 2000, function() {
+				$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
 					$('#content').load('work.html #content', function() {//WORK.HTML
 						window.history.replaceState("", "", '/work');
 						var hiddenDiv = document.getElementById('content');
@@ -327,7 +327,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						
 						loadWork();
 
-						$("#content").animate({left:'0px'}, 2000, function() {
+						$("#content").animate({left:'0px'}, 1000, function() {
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
 								scrollTop();
 							}		
