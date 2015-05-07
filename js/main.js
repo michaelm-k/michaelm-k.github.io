@@ -195,7 +195,7 @@ function loadWork() {
 function loadContact() {
 	$("#dave").stop(true).animate( {opacity: '1'}, 2000); 
 	
-	$('#content-text .fa-university, #content-text .fa-stack-overflow, #content-text .fa-linkedin-square, #content-text .fa-github-square').addClass('animated rubberBand');
+	$('#content-text .fa-diamond, #content-text .fa-stack-overflow, #content-text .fa-linkedin-square, #content-text .fa-github-square').addClass('animated rubberBand');
 }
 
 /* START: ABOUT & CONTACT LINKS */

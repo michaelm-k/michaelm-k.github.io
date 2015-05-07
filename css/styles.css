@@ -72,7 +72,14 @@
 .navbar-inverse .navbar-brand {
 	color: #ffffff;
 }
-
+#music{
+	float:right;
+}
+@media screen and (max-width:767px){
+	#music{
+		float:left;
+	}
+}
 
 span {
     color:#ffffff;  
@@ -80,8 +87,8 @@ span {
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse
 .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
-background-color: #3B5998;
-color: #ffffff;
+	background-color: #3B5998;
+	color: #ffffff;
 }
 
 
@@ -249,4 +256,10 @@ a.writer.active{
 
 #content-text .fa-stack-overflow,#content-text .fa-github-square,#content-text .fa-linkedin-square {
 	margin:0 0 0 15px;
+}
+@media screen and (max-width:767px){
+	#content{
+		padding-left:15px;
+		padding-right:15px;
+	}
 }
