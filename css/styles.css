@@ -4,7 +4,7 @@
   border-color: #bdbcae;
   opacity: 0.95;
   font-family: 'Lato', sans-serif;	
-  font-size:15px;
+  font-size:17px;
 }
 .slideIn {
     top:-100px;
@@ -67,7 +67,7 @@
 }
 .navbar-brand{
 	height:55px;
-	font-size:20px;
+	font-size:22px;
 }
 .navbar-inverse .navbar-brand {
 	color: #ffffff;
