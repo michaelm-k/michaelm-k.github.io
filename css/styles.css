@@ -67,7 +67,7 @@
 	height:55px;
 }
 .navbar-inverse .navbar-brand {
-color: #ffffff;
+	color: #ffffff;
 }
 
 
@@ -140,7 +140,9 @@ body {
 .fa-soundcloud, .fa-stack-overflow, .fa-github-alt, .fa-linkedin {
      color: #ffffff;/* (inherit = grey)*/
 }
-
+.fa-linkedin,.fa-stack-overflow,.fa-soundcloud {
+	margin:0 0 0 5px;
+}
 /* END: FOOTER */
 
 /* START: HOME */
@@ -158,6 +160,9 @@ a.writer.active{
 #content{
 	font-family: 'Lato', sans-serif;
 }
+#name{
+	opacity:0;
+}
 .skip_intro{
 	opacity:0;
 	text-decoration:none;
@@ -170,3 +175,42 @@ a.writer.active{
 	text-decoration:none;
 }
 /* END: HOME */
+
+.aboutimg{
+	float:right;margin:0 0 20px 0;
+}
+
+.aboutimg #img{
+	width:500px;height:auto;float:right;clear:right;margin:0 0 0 20px;
+}
+.aboutimg#photocap{
+	width:157px;display:block;text-decoration: none;color: #bdbcae;font-style:italic;opacity:0;margin:0 0 0 20px;
+}
+
+#projectheading{
+	color:#000000;
+}
+#storyimg {
+	cursor:zoom-in;height:300px;width:250px;opacity:0.5;float:left;margin:0 20px 20px 0;
+}
+#websiteimg {
+	cursor:zoom-in;width:500px;height:auto;float:right;clear:right;margin:0 0 20px 20px;
+}
+#githubfav {
+	vertical-align:baseline;height:20px;width:auto;
+}
+#drinkcup{
+	cursor:zoom-in;height:auto;width:500px;float:left;margin:0 20px 20px 0;
+}
+#dave{
+	float:right; width:500px; height:auto; margin:0 0 20px 0;opacity:0;
+}
+#badge1,#badge4{
+	margin-top:20px;float:left;opacity:0;
+}
+#badge2{
+	margin-top:20px;float:left;margin-right:20px;margin-left:20px;opacity:0;
+}
+#badge3{
+	margin-top:20px;float:left;margin-right:20px;opacity:0;
+}

@@ -2,7 +2,7 @@ if ($( "#content" ).has( "#name" )){
 	$("html, body").css("overflow", "hidden");
 }
 
-/* START: RESUME LINK */
+/* START: RESUME/BLOG LINK */
 	$( "#tab2, #tab5" )
 	.mouseover(function() { 
 		$(this).animate( {color: '#bdbcae'}, 200 ); 		
@@ -14,7 +14,7 @@ if ($( "#content" ).has( "#name" )){
 	$("#tab2, #tab5").click(function() {    
 		$(this).stop(true).animate( {color: '#ffffff'}, 200 );     
 	});
-/* END: RESUME LINK */
+/* END: RESUME/BLOG LINK */
 
 /* START: SOCIAL ICONS */ 
 var clicked=0;
