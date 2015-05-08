@@ -246,17 +246,13 @@ a.writer.active{
 		float:none;padding-left:0;
 	}
 	#content{
-		padding-left:10px;padding-right:10px;
+		padding-left:15px;padding-right:15px;
 	}	
-}
-
-@media screen and (max-width: 645px){
 	.aboutimg #photocap {
 		padding-bottom:20px;
 	}
-	.about #img {
+	.aboutimg #img {
 		float:none;
 	}
-	.aboutimg{margin: 0 0 0 0; float:none;padding-left:0;}
+	.aboutimg{float:none;margin: 0 0 0 0; padding-left:0;}
 }
-
