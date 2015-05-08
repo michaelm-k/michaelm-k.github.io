@@ -290,8 +290,8 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$( "#content" ).css( "position", "relative" ); 
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'+110%'}, 1000, function() {
-					$('#content').load('work.html #content', function() {//WORK.HTML
-						window.history.replaceState("", "", '/work');
+					$('#content').load('projects.html #content', function() {//WORK.HTML
+						window.history.replaceState("", "", '/projects');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';
@@ -316,8 +316,8 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$( "#content" ).css( "position", "relative" ); 
 				$(".custom-wrapper").css("overflow", "hidden");
 				$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
-					$('#content').load('work.html #content', function() {//WORK.HTML
-						window.history.replaceState("", "", '/work');
+					$('#content').load('projects.html #content', function() {//WORK.HTML
+						window.history.replaceState("", "", '/projects');
 						var hiddenDiv = document.getElementById('content');
 						var docWidth = window.innerWidth;
 						hiddenDiv.style.position = 'relative';

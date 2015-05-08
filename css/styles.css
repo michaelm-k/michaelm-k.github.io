@@ -192,10 +192,10 @@ a.writer.active{
 }
 
 .aboutimg #img{
-	width:500px;height:auto;float:right;clear:right;padding-left:20px;padding-bottom:5px;
+	width:500px;height:auto;float:right;clear:right;padding-bottom:5px;
 }
 .aboutimg #photocap{
-	display:block;text-decoration: none;color: #bdbcae;font-style:italic;opacity:0;padding-left:20px;
+	display:block;text-decoration: none;color: #bdbcae;font-style:italic;opacity:0;
 }
 
 #projectheading{
@@ -218,15 +218,6 @@ a.writer.active{
 
 #dave{
 	float:right; width:500px; height:auto; margin:0 0 30px 0;opacity:0;
-}
-
-@media screen and (max-width: 575px){
-	.aboutimg, .aboutimg #img, .aboutimg #photocap {
-		padding-left:0;
-	}
-	.aboutimg #photocap{
-		padding-bottom:15px;
-	}
 }
 
 #content-text a{
@@ -254,13 +245,18 @@ a.writer.active{
 		margin:0 0 30px 0;
 		float:none;padding-left:0;
 	}
-	
+	#content{
+		padding-left:10px;padding-right:10px;
+	}	
 }
-@media screen and (max-width: 675px){
-	.aboutimg #photocap{
-		padding-left:0;
+
+@media screen and (max-width: 645px){
+	.aboutimg #photocap {
+		padding-bottom:20px;
 	}
-	.aboutimg{margin: 0 0 0 0; float:right;padding-left:0;}
-	.aboutimg #img {padding-left:0;}
+	.about #img {
+		float:none;
+	}
+	.aboutimg{margin: 0 0 0 0; float:none;padding-left:0;}
 }
 
