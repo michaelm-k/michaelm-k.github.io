@@ -192,14 +192,13 @@ function loadContact() {
 	$('#content-text .fa-diamond, #content-text .fa-stack-overflow, #content-text .fa-linkedin-square, #content-text .fa-github-square').addClass('animated rubberBand');
 }
 
-
 function prepContent() {
 	event.preventDefault();
 	$( "#content" ).css( "position", "relative" ); 
 	$(".custom-wrapper").css("overflow", "hidden");
 }
 
-function formatContent() {
+function enterContent_fromLeft() {
 	var hiddenDiv = document.getElementById('content');
 	var docWidth = window.innerWidth;
 	hiddenDiv.style.position = 'relative';
@@ -208,17 +207,26 @@ function formatContent() {
 	$(".custom-wrapper").css("overflow", "hidden");
 }
 
-/* START: ABOUT & CONTACT LINKS */
+function enterContent_fromRight() {
+	var hiddenDiv = document.getElementById('content');
+	var docWidth = window.innerWidth;
+	hiddenDiv.style.position = 'relative';
+	hiddenDiv.style.display = 'inline-block';
+	hiddenDiv.style.left = docWidth + "px";
+	$(".custom-wrapper").css("overflow", "hidden");
+}
+
+/* START: NAV CONTENT TRANSITIONS */
 $(".navbar-inverse .navbar-nav > li > a").click(function() { 
 	$("html, body").css("overflow", "visible");
 	if (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length) {	
-		if ($(event.target).closest("#tab1").length && !$(this).closest('li').hasClass( "active" )) {
-			if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3") {
+		if ($(event.target).closest("#tab1").length && !$(this).closest('li').hasClass( "active" )) { // clicked on ABOUT
+			if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3") { // at CONTACT or PROJECTS
 				prepContent();
 				$("#content").stop(true).animate({left:'+110%'}, 1000, function() {
-					$('#content').load('about.html #content', function() {// load ABOUT.HTML
+					$('#content').load('about.html #content', function() {
 						window.history.replaceState("", "", '/about');  // comment out during development
-						formatContent();
+						enterContent_fromLeft();
 						$("#content").animate({left:'0px'}, 1000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit					
 							loadAbout();
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
@@ -228,14 +236,13 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 					});
 				});
 				$('li').removeClass( 'active' );
-				$(this).closest('li').addClass( 'active' );
-				
-			} else {
+				$(this).closest('li').addClass( 'active' );		
+			} else { // at home
 				prepContent();
 				$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
-					$('#content').load('about.html #content', function() {// load ABOUT.HTML
+					$('#content').load('about.html #content', function() {
 						window.history.replaceState("", "", '/about'); // comment out during development
-						formatContent();
+						enterContent_fromRight();
 						$("#content").animate({left:'0px'}, 1000, function() {						
 							loadAbout();	
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
@@ -247,12 +254,12 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$('li').removeClass( 'active' );
 				$(this).closest('li').addClass( 'active' );
 			}				
-		} else if ($(event.target).closest("#tab4").length && !$(this).closest('li').hasClass( "active" )) {
+		} else if ($(event.target).closest("#tab4").length && !$(this).closest('li').hasClass( "active" )) { // clicked on CONTACT
 			prepContent();
 			$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
-				$('#content').load('contact.html #content', function() { // load CONTACT.HTML 	
+				$('#content').load('contact.html #content', function() {
 					window.history.replaceState("", "", '/contact'); // comment out during development
-					formatContent();
+					enterContent_fromRight();
 					$("#content").animate({left:'0px'}, 1000, function() {	
 						loadContact();
 						if($(window).scrollTop() !== 0 && scrolling==false) {	
@@ -263,13 +270,13 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			});
 			$('li').removeClass( 'active' );
 			$(this).closest('li').addClass( 'active' );
-		} else if ($(event.target).closest("#tab3").length && !$(this).closest('li').hasClass( "active" )) {
-			if ($('li.active a').attr('id') == "tab4") {
+		} else if ($(event.target).closest("#tab3").length && !$(this).closest('li').hasClass( "active" )) { // clicked on PROJECTS
+			if ($('li.active a').attr('id') == "tab4") { // at CONTACT
 				prepContent();
 				$("#content").stop(true).animate({left:'+110%'}, 1000, function() {
-					$('#content').load('projects.html #content', function() { // load PROJECTS.HTML
+					$('#content').load('projects.html #content', function() {
 						window.history.replaceState("", "", '/projects'); // comment out during development
-						formatContent();
+						enterContent_fromLeft();
 						$("#content").animate({left:'0px'}, 1000, function() {
 							loadProjects();	
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
@@ -280,12 +287,12 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				});
 				$('li').removeClass( 'active' );
 				$(this).closest('li').addClass( 'active' );
-			} else {
+			} else { // at ABOUT or home
 				prepContent();
 				$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
-					$('#content').load('projects.html #content', function() {// load PROJECTS.HTML
+					$('#content').load('projects.html #content', function() {
 						window.history.replaceState("", "", '/projects'); // comment out during development
-						formatContent();
+						enterContent_fromRight();
 						$("#content").animate({left:'0px'}, 1000, function() {
 							loadProjects();
 							if($(window).scrollTop() !== 0 && scrolling==false) {	
@@ -300,7 +307,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 		}
 	}	
 });
-/* END: ABOUT & CONTACT LINKS */
+/* END: NAV CONTENT TRANSITIONS */
 	
 /* START: HOME */
 	/* START: SKIP_INTRO */
