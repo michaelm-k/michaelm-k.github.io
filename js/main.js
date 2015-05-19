@@ -220,9 +220,9 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						document.getElementById('content').style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:'0px'}, 1000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit					
 							loadAbout();
-							if ($(window).scrollTop() !== 0 && scrolling == false) {	
+						//	if ($(window).scrollTop() !== 0 && scrolling == false) {	
 								scrollTop();
-							}
+							//}
 						});
 					});
 				});
@@ -400,7 +400,6 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 	$(window).on('beforeunload', function() {
 		$(window).scrollTop(0);
 	});		
-	formatContent();
 	if ($('li.active a').attr('id') == "tab1") {
 		loadAbout();
 	} else if ($('li.active a').attr('id') == "tab3") {
