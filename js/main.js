@@ -220,6 +220,8 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						document.getElementById('content').style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:'0px'}, 1000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit					
 							loadAbout();
+							$("html, body").css("overflow", "hidden");
+							$("html, body").css("overflow", "visible");							
 							if ($(window).scrollTop() !== 0 && scrolling == false) {	
 								scrollTop();
 							}
