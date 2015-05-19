@@ -336,6 +336,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				loadAbout();
 				
 				$("html, body").css("overflow", "visible");
+				$(".custom-wrapper").css("overflow", "hidden");
 				$(window).on('beforeunload', function() {
 					$(window).scrollTop(0);
 				});				
@@ -397,6 +398,7 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 		$(".static-footer").slideToggle();
 	},500);
 	$("html, body").css("overflow", "visible");
+	$(".custom-wrapper").css("overflow", "hidden");
 	$(window).on('beforeunload', function() {
 		$(window).scrollTop(0);
 	});		
