@@ -331,7 +331,6 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$('.navbar-inverse').removeClass('slideIn');		
 				loadAbout();
 				$("html, body").css("overflow", "visible");
-				$('html, body').style.scrollTop = 0;
 				$("#tab1").parent().addClass('active');
 				setTimeout(function(){
 					$(".static-footer").slideToggle();
@@ -394,7 +393,6 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 	loadProjects();
 	loadContact();
 	$("html, body").css("overflow", "visible");
-	//$('html, body').style.scrollTop = 0;
 	setTimeout(function(){
 		$(".static-footer").slideToggle();
 	},500);
