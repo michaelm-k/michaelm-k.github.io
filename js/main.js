@@ -350,7 +350,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 		$('.skip_intro').animate({opacity:0}, 2000);
 		$( ".skip_intro" ).css( "cursor", "default" );	
 	},15000);
-	/* END:  SKIP_INTRO */
+	/* END: SKIP_INTRO */
 
 	/* START: QUOTE */
 	setTimeout(function(){
@@ -375,22 +375,21 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
  /* END: HOME */
  
 /* START: LEAVE PAGE */  
-  $(window).on("blur focus", function(e) {
-    var prevType = $(this).data("prevType");
-
-    if (prevType != e.type) {   //  reduce double fire issues
-        switch (e.type) {
-            case "blur":
-                $("a.writer").removeClass( "active" );
+$(window).on("blur focus", function(e) {
+	var prevType = $(this).data("prevType");
+	if (prevType != e.type) {   // reduce double fire issues
+		switch (e.type) {
+			case "blur":
+				$("a.writer").removeClass( "active" );
 				hovering=0;
-                break;
-            case "focus":
-                 $("a.writer").removeClass( "active" );
-				 hovering=0;
-                break;
-        }
-    }
-    $(this).data("prevType", e.type);
+				break;
+			case "focus":
+				$("a.writer").removeClass( "active" );
+				hovering=0;
+				break;
+		}
+	}
+	$(this).data("prevType", e.type);
 });
 /* END: LEAVE PAGE */ 
 
@@ -399,15 +398,9 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 	$( "#content" ).fadeIn( "slow" );
 	$('.navbar-inverse').removeClass('slideIn');		
 	$("html, body").css("overflow", "");		
-	//START: #tab1-specific
-		loadAbout();
-	//END: #tab1specific	
-	//START: #tab3-specific
-		loadProjects();
-	//END: #tab3-specific	
-	//START: #tab4-specific
-		loadContact();
-	//END: #tab4-specific
+	loadAbout();
+	loadProjects();
+	loadContact();
 	setTimeout(function(){
 		$(".static-footer").slideToggle();
 	},500);
