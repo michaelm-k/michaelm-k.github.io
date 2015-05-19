@@ -328,16 +328,17 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			skipped=true;
 			$('#content').load('about.html #content', function() {
 				window.history.replaceState("", "", '/about');		
-				$('.navbar-inverse').removeClass('slideIn');		
+				$('.navbar-inverse').removeClass('slideIn');	
+				setTimeout(function(){
+					$(".static-footer").slideToggle();
+				},500);	
+				$("#tab1").parent().addClass('active');
 				loadAbout();
+				
 				$("html, body").css("overflow", "visible");
 				$(window).on('beforeunload', function() {
 					$(window).scrollTop(0);
 				});				
-				$("#tab1").parent().addClass('active');
-				setTimeout(function(){
-					$(".static-footer").slideToggle();
-				},500);	
 			});
 		}	
 	});
@@ -392,16 +393,20 @@ $(window).on("blur focus", function(e) {
 
 if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3" || $('li.active a').attr('id') == "tab1") {
 	$('.navbar-inverse').removeClass('slideIn');
-	loadAbout();
-	loadProjects();
-	loadContact();
-	$("html, body").css("overflow", "visible");
-	$(window).on('beforeunload', function() {
-		$(window).scrollTop(0);
-	});	
 	setTimeout(function(){
 		$(".static-footer").slideToggle();
 	},500);
+	$("html, body").css("overflow", "visible");
+	$(window).on('beforeunload', function() {
+		$(window).scrollTop(0);
+	});		
+	if ($('li.active a').attr('id') == "tab1") {
+		loadAbout();
+	} else if ($('li.active a').attr('id') == "tab3") {
+		loadProjects();
+	} else {
+		loadContact();
+	}
 } else {
 	setTimeout(function(){
 		if (skipped==false) {
