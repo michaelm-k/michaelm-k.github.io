@@ -1,3 +1,22 @@
+html,
+body {
+   height:100%;
+   font-family: 'Lato', sans-serif;
+   position:relative;
+   overflow:auto;
+   z-index:1000;
+}
+
+.custom-wrapper {
+   min-height:100%;
+   position:relative;
+}
+
+.pad-container {
+  padding-top:80px;
+  padding-bottom:80px; /*height of the footer plus a little */
+}
+
 /* START: HEADER */
 .navbar-inverse {
   background-color:#3B5998;
@@ -5,35 +24,39 @@
   opacity: 0.95;
   font-family: 'Lato', sans-serif;	
   font-size:16px;
+  z-index:999;
 }
+
 .slideIn {
     top:-100px;
 }
 
-.navbar {transition:all 1s ease-in-out}
+.navbar {
+	transition:all 1s ease-in-out;
+}
 
 .navbar-inverse .navbar-nav > .active > a:not(#tab2):not(#tab5),
 .navbar-inverse .navbar-nav > .active > a:not(#tab2):not(#tab5):hover,
 .navbar-inverse .navbar-nav > .active > a:not(#tab2):not(#tab5):focus {
-  color: #ffffff;
-  background-color: #3B5998; 
-  /*text-decoration: underline;*/
-  cursor:pointer;
+	color: #ffffff;
+	background-color: #3B5998; 
+	/*text-decoration: underline;*/
+	cursor:pointer;
 }
 .navbar-inverse .navbar-toggle {
-  border-color:#3B5998;
-  background-color: #3B5998;	
+	border-color:#3B5998;
+	background-color: #3B5998;	
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #3B5998;
+	background-color: #3B5998;
 }
 .menu {
 	border-color:#3B5998;
 	background-color: #3B5998;	
 }
 .menuHover {
-  background-color: #3B5998;
+	background-color: #3B5998;
 	-webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 	-moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 	box-shadow: inset 0px 0px 7px #ffffff;
@@ -51,19 +74,19 @@
 #tab2, #tab5{
 	color:#ffffff;
 	background-color: #3B5998; 
-	 height:55px; 
+	height:55px; 
 }
 .navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5) {
-  color: #ffffff /* text color default */;
-  transition-duration: 200ms;
-  cursor:pointer;
-  height:55px; 
+	color: #ffffff /* text color default */;
+	transition-duration: 200ms;
+	cursor:pointer;
+	height:55px; 
 }
 .navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5):hover ,
 .navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5):focus  {
-  color: #bdbcae; /* flash */
-  transition-duration: 200ms;
-  cursor:pointer;
+	color: #bdbcae; /* flash */
+	transition-duration: 200ms;
+	cursor:pointer;
 }
 .navbar-brand{
 	height:55px;
@@ -91,8 +114,7 @@ span {
 	color: #ffffff;
 }
 
-
-  @media (min-width:768px) { 
+@media (min-width:768px) { 
 
 	.navbar > .container{
 	    text-align: center;
@@ -109,23 +131,8 @@ span {
 	    clear: none;
 		vertical-align: top;
 	}
-  }
+}
 /* END: HEADER */
-
-html,
-body {
-   height:100%;
-   font-family: 'Lato', sans-serif;	
-}
-
-.custom-wrapper {
-   min-height:100%;
-   position:relative;
-}
-.pad-container{
-  padding-top:80px;
-  padding-bottom:80px; /*height of the footer plus a little */
-  }
   
 /* START: FOOTER */
 .static-footer {
@@ -143,6 +150,7 @@ body {
   color: #ffffff; 
   margin-top: 17px;
 }
+
 .static-footer .text-primary{ 
   margin-top: -35px;
 }
@@ -151,6 +159,7 @@ body {
 .static-footer .fa-soundcloud, .static-footer .fa-stack-overflow, .static-footer .fa-github-alt, .static-footer .fa-linkedin {
      color: #ffffff;/* (inherit = grey)*/
 }
+
 .static-footer .fa-linkedin,.static-footer .fa-stack-overflow,.static-footer .fa-soundcloud {
 	margin:0 0 0 10px;
 }
@@ -165,15 +174,19 @@ a.writer {
 	cursor: default;
 	font-size: 150%;
 }
+
 a.writer.active{
 	 color:#3B5998;	 
 }
+
 #content{
 	font-family: 'Adamina', serif;
 }
+
 #name{
 	opacity:0;
 }
+
 .skip_intro{
 	opacity:0;
 	text-decoration:none;
@@ -181,6 +194,7 @@ a.writer.active{
 	cursor: default;
 	font-size: 150%;
 }
+
 .skip_intro.active{
 	color:#3B5998;	
 	text-decoration:none;

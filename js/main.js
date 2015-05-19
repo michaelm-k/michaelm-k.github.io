@@ -89,14 +89,6 @@ var scrollTop = function () {
     };
 })();
 
-$(".navbar-inverse .navbar-nav > li > a").click(function() { 
-	if ($(this).closest("li").hasClass("active")) {
-		if($(window).scrollTop() !== 0 && scrolling==false) {	
-			scrollTop();
-		}
-	} 
-}); 
-
 /* START: NAVBAR TOGGLE BTN */
 $(".navbar-toggle").click(function() {
     if (!$("#tab4").is(":visible")) {
@@ -161,7 +153,7 @@ function loadAbout() {
 	//END: BLINKING CAPTION	
 	
 	setTimeout(function(){
-		$("#photocap").attr("href", "http://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
+		$("#photocap").attr("href", "https://genius.com/Kendrick-lamar-the-art-of-peer-pressure-lyrics");
 		$("#photocap").attr("target","_blank");
 		$( "#photocap" )
 		.mouseover(function() { 
@@ -203,13 +195,18 @@ function formatContent() {
 
 /* START: NAV CONTENT TRANSITIONS */
 $(".navbar-inverse .navbar-nav > li > a").click(function() { 
-	if (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length) {	
+	//$("html, body").css("overflow", "visible");	
+	if ($(this).closest("li").hasClass("active") && (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length)) { 
+		if ($(window).scrollTop() !== 0 && scrolling==false) {	
+			scrollTop();
+		}		
+	} else if (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length) {
 		if ($(event.target).closest("#tab1").length && !$(this).closest("li").hasClass( "active" )) { // clicked on ABOUT
 			if ($("li.active a").attr("id") == "tab4" || $("li.active a").attr("id") == "tab3") { // at CONTACT or PROJECTS
 				prepContent();
 				$("#content").stop(true).animate({left:"+110%"}, 1000, function() {
 					$("#content").load("about.html #content", function() {
-						window.history.replaceState("", "", "/about");  // comment out during development
+						//window.history.replaceState("", "", "/about");  // comment out during development
 						formatContent();
 						document.getElementById("content").style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:"0px"}, 1000, function(){ // .stop(true) isn't present here because it made it possible to glitch shit					
@@ -226,7 +223,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				prepContent();
 				$("#content").stop(true).animate({left:"-110%"}, 1000, function() {
 					$("#content").load("about.html #content", function() {
-						window.history.replaceState("", "", "/about"); // comment out during development
+						//window.history.replaceState("", "", "/about"); // comment out during development
 						formatContent();
 						document.getElementById("content").style.left = window.innerWidth + "px"; // enter content from right
 						$("#content").animate({left:"0px"}, 1000, function() {						
@@ -244,7 +241,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			prepContent();
 			$("#content").stop(true).animate({left:"-110%"}, 1000, function() {
 				$("#content").load("contact.html #content", function() {
-					window.history.replaceState("", "", "/contact"); // comment out during development
+					//window.history.replaceState("", "", "/contact"); // comment out during development
 					formatContent();
 					document.getElementById("content").style.display = "block";
 					document.getElementById("content").style.left = window.innerWidth + "px"; // enter content from right		
@@ -263,7 +260,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				prepContent();
 				$("#content").stop(true).animate({left:"+110%"}, 1000, function() {
 					$("#content").load("projects.html #content", function() {
-						window.history.replaceState("", "", "/projects"); // comment out during development
+						//window.history.replaceState("", "", "/projects"); // comment out during development
 						formatContent();
 						document.getElementById("content").style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:"0px"}, 1000, function() {
@@ -280,7 +277,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				prepContent();
 				$("#content").stop(true).animate({left:"-110%"}, 1000, function() {
 					$("#content").load("projects.html #content", function() {
-						window.history.replaceState("", "", "/projects"); // comment out during development
+						//window.history.replaceState("", "", "/projects"); // comment out during development
 						formatContent();
 						document.getElementById("content").style.left = window.innerWidth + "px"; // enter content from right		
 						$("#content").animate({left:"0px"}, 1000, function() {
@@ -295,7 +292,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(this).closest("li").addClass( "active" );
 			}
 		}
-	}	
+	}
 });
 /* END: NAV CONTENT TRANSITIONS */
 	
@@ -321,7 +318,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 		if (tooLatetoSkip == false){
 			skipped=true;
 			$("#content").load("about.html #content", function() {
-				window.history.replaceState("", "", "/about"); // comment out during development	
+				//window.history.replaceState("", "", "/about"); // comment out during development	
 				$(".navbar-inverse").removeClass("slideIn");	
 				setTimeout(function(){
 					$(".static-footer").slideToggle();
@@ -387,6 +384,7 @@ if ($("li.active a").attr("id") == "tab4" || $("li.active a").attr("id") == "tab
 	$(".navbar-inverse").removeClass("slideIn");
 	setTimeout(function(){
 		$(".static-footer").slideToggle();
+		$("html,body").css("overflow", "visible");	
 	}, 500);
 	$(window).on("beforeunload", function() {
 		$(window).scrollTop(0);
