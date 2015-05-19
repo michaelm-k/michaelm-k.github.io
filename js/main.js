@@ -175,6 +175,10 @@ function loadAbout() {
 			$(this).stop(true).animate( {color: '#bdbcae'}, 200 ); 			
 		});
 	},2000);
+	
+	if ($(window).scrollTop() !== 0 && scrolling == false) {	
+		scrollTop();
+	}
 }
 
 function loadProjects() {
@@ -185,11 +189,17 @@ function loadProjects() {
 	.mouseout(function() {
 		$(this).stop(true).animate( {opacity: '0.5'}, 1000 ); 			
 	});
+	if ($(window).scrollTop() !== 0 && scrolling == false) {	
+		scrollTop();
+	}
 }
 
 function loadContact() {
 	$("#dave").stop(true).animate( {opacity: '1'}, 2000); 	
 	$('#content-text .fa-diamond, #content-text .fa-stack-overflow, #content-text .fa-linkedin-square, #content-text .fa-github-square').addClass('animated rubberBand');
+	if ($(window).scrollTop() !== 0 && scrolling == false) {	
+		scrollTop();
+	}
 }
 
 function prepContent() {
@@ -220,9 +230,6 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						document.getElementById('content').style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:'0px'}, 1000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit					
 							loadAbout();
-							if($(window).scrollTop() !== 0 && scrolling == false) {	
-								scrollTop();
-							}
 						});
 					});
 				});
@@ -237,9 +244,6 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						document.getElementById('content').style.left = window.innerWidth + "px"; // enter content from right
 						$("#content").animate({left:'0px'}, 1000, function() {						
 							loadAbout();	
-							if($(window).scrollTop() !== 0 && scrolling == false) {	
-								scrollTop();
-							}				
 						});
 					});
 				});
@@ -256,9 +260,6 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 					document.getElementById('content').style.left = window.innerWidth + "px"; // enter content from right		
 					$("#content").animate({left:'0px'}, 1000, function() {	
 						loadContact();
-						if($(window).scrollTop() !== 0 && scrolling == false) {	
-							scrollTop();
-						}	
 					});					
 				});
 			});
@@ -274,9 +275,6 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						document.getElementById('content').style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:'0px'}, 1000, function() {
 							loadProjects();	
-							if($(window).scrollTop() !== 0 && scrolling == false) {	
-								scrollTop();
-							}	
 						});
 					});
 				});
@@ -291,9 +289,6 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						document.getElementById('content').style.left = window.innerWidth + "px"; // enter content from right		
 						$("#content").animate({left:'0px'}, 1000, function() {
 							loadProjects();
-							if($(window).scrollTop() !== 0 && scrolling == false) {	
-								scrollTop();
-							}		
 						});
 					});
 				});
