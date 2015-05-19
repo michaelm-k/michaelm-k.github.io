@@ -329,8 +329,8 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			$('#content').load('about.html #content', function() {
 				window.history.replaceState("", "", '/about');		
 				$('.navbar-inverse').removeClass('slideIn');		
-				$("html, body").css("overflow", "visible");
 				loadAbout();
+				$("html, body").css("overflow", "visible");
 				$("#tab1").parent().addClass('active');
 				setTimeout(function(){
 					$(".static-footer").slideToggle();
@@ -389,11 +389,11 @@ $(window).on("blur focus", function(e) {
 
 if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3" || $('li.active a').attr('id') == "tab1") {
 	$('.navbar-inverse').removeClass('slideIn');
-	$("html, body").css("overflow", "visible");
 	loadAbout();
 	loadProjects();
 	loadContact();
 	scrollTop();
+	$("html, body").css("overflow", "visible");
 	setTimeout(function(){
 		$(".static-footer").slideToggle();
 	},500);
