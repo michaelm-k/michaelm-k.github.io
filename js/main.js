@@ -195,7 +195,7 @@ function formatContent() {
 
 /* START: NAV CONTENT TRANSITIONS */
 $(".navbar-inverse .navbar-nav > li > a").click(function() { 
-	//$("html, body").css("overflow", "visible");	
+	$("html, body").css("overflow", "visible");	
 	if ($(this).closest("li").hasClass("active") && (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length)) { 
 		if ($(window).scrollTop() !== 0 && scrolling==false) {	
 			scrollTop();
@@ -206,7 +206,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				prepContent();
 				$("#content").stop(true).animate({left:"+110%"}, 1000, function() {
 					$("#content").load("about.html #content", function() {
-						//window.history.replaceState("", "", "/about");  // comment out during development
+						window.history.replaceState("", "", "/about");  // comment out during development
 						formatContent();
 						document.getElementById("content").style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:"0px"}, 1000, function(){ // .stop(true) isn't present here because it made it possible to glitch shit					
@@ -223,7 +223,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				prepContent();
 				$("#content").stop(true).animate({left:"-110%"}, 1000, function() {
 					$("#content").load("about.html #content", function() {
-						//window.history.replaceState("", "", "/about"); // comment out during development
+						window.history.replaceState("", "", "/about"); // comment out during development
 						formatContent();
 						document.getElementById("content").style.left = window.innerWidth + "px"; // enter content from right
 						$("#content").animate({left:"0px"}, 1000, function() {						
@@ -241,7 +241,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			prepContent();
 			$("#content").stop(true).animate({left:"-110%"}, 1000, function() {
 				$("#content").load("contact.html #content", function() {
-					//window.history.replaceState("", "", "/contact"); // comment out during development
+					window.history.replaceState("", "", "/contact"); // comment out during development
 					formatContent();
 					document.getElementById("content").style.display = "block";
 					document.getElementById("content").style.left = window.innerWidth + "px"; // enter content from right		
@@ -260,7 +260,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				prepContent();
 				$("#content").stop(true).animate({left:"+110%"}, 1000, function() {
 					$("#content").load("projects.html #content", function() {
-						//window.history.replaceState("", "", "/projects"); // comment out during development
+						window.history.replaceState("", "", "/projects"); // comment out during development
 						formatContent();
 						document.getElementById("content").style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:"0px"}, 1000, function() {
@@ -277,7 +277,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				prepContent();
 				$("#content").stop(true).animate({left:"-110%"}, 1000, function() {
 					$("#content").load("projects.html #content", function() {
-						//window.history.replaceState("", "", "/projects"); // comment out during development
+						window.history.replaceState("", "", "/projects"); // comment out during development
 						formatContent();
 						document.getElementById("content").style.left = window.innerWidth + "px"; // enter content from right		
 						$("#content").animate({left:"0px"}, 1000, function() {
@@ -318,7 +318,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 		if (tooLatetoSkip == false){
 			skipped=true;
 			$("#content").load("about.html #content", function() {
-				//window.history.replaceState("", "", "/about"); // comment out during development	
+				window.history.replaceState("", "", "/about"); // comment out during development	
 				$(".navbar-inverse").removeClass("slideIn");	
 				setTimeout(function(){
 					$(".static-footer").slideToggle();
