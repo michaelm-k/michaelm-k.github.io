@@ -394,7 +394,7 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 	loadProjects();
 	loadContact();
 	$("html, body").css("overflow", "visible");
-	$('html, body').style.scrollTop = 0;
+	//$('html, body').style.scrollTop = 0;
 	setTimeout(function(){
 		$(".static-footer").slideToggle();
 	},500);
