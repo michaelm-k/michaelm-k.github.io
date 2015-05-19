@@ -208,7 +208,7 @@ function formatContent() {
 
 /* START: NAV CONTENT TRANSITIONS */
 $(".navbar-inverse .navbar-nav > li > a").click(function() { 
-	$("html, body").css("overflow", "auto");
+	$("html, body").css("overflow", "visible");
 	if (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length) {	
 		if ($(event.target).closest("#tab1").length && !$(this).closest('li').hasClass( "active" )) { // clicked on ABOUT
 			if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3") { // at CONTACT or PROJECTS
