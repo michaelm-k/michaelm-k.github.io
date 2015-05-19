@@ -198,22 +198,12 @@ function prepContent() {
 	$(".custom-wrapper").css("overflow", "hidden");
 }
 
-function enterContent_fromLeft() {
+function formatContent() {
+	$(".custom-wrapper").css("overflow", "hidden");		
 	var hiddenDiv = document.getElementById('content');
 	var docWidth = window.innerWidth;
 	hiddenDiv.style.position = 'relative';
 	hiddenDiv.style.display = 'inline-block';
-	hiddenDiv.style.left = -docWidth + "px";
-	$(".custom-wrapper").css("overflow", "hidden");
-}
-
-function enterContent_fromRight() {
-	var hiddenDiv = document.getElementById('content');
-	var docWidth = window.innerWidth;
-	hiddenDiv.style.position = 'relative';
-	hiddenDiv.style.display = 'inline-block';
-	hiddenDiv.style.left = docWidth + "px";
-	$(".custom-wrapper").css("overflow", "hidden");
 }
 
 /* START: NAV CONTENT TRANSITIONS */
@@ -226,10 +216,11 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$("#content").stop(true).animate({left:'+110%'}, 1000, function() {
 					$('#content').load('about.html #content', function() {
 						window.history.replaceState("", "", '/about');  // comment out during development
-						enterContent_fromLeft();
+						formatContent();
+						document.getElementById('content').style.left = -docWidth + "px"; // enter content from left		
 						$("#content").animate({left:'0px'}, 1000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit					
 							loadAbout();
-							if($(window).scrollTop() !== 0 && scrolling==false) {	
+							if($(window).scrollTop() !== 0 && scrolling == false) {	
 								scrollTop();
 							}
 						});
@@ -242,10 +233,11 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
 					$('#content').load('about.html #content', function() {
 						window.history.replaceState("", "", '/about'); // comment out during development
-						enterContent_fromRight();
+						formatContent();
+						document.getElementById('content').style.left = docWidth + "px"; // enter content from right
 						$("#content").animate({left:'0px'}, 1000, function() {						
 							loadAbout();	
-							if($(window).scrollTop() !== 0 && scrolling==false) {	
+							if($(window).scrollTop() !== 0 && scrolling == false) {	
 								scrollTop();
 							}				
 						});
@@ -259,10 +251,12 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
 				$('#content').load('contact.html #content', function() {
 					window.history.replaceState("", "", '/contact'); // comment out during development
-					enterContent_fromRight();
+					formatContent();
+					document.getElementById('content').style.display = 'block';
+					document.getElementById('content').style.left = docWidth + "px"; // enter content from right		
 					$("#content").animate({left:'0px'}, 1000, function() {	
 						loadContact();
-						if($(window).scrollTop() !== 0 && scrolling==false) {	
+						if($(window).scrollTop() !== 0 && scrolling == false) {	
 							scrollTop();
 						}	
 					});					
@@ -276,10 +270,11 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$("#content").stop(true).animate({left:'+110%'}, 1000, function() {
 					$('#content').load('projects.html #content', function() {
 						window.history.replaceState("", "", '/projects'); // comment out during development
-						enterContent_fromLeft();
+						formatContent();
+						document.getElementById('content').style.left = -docWidth + "px"; // enter content from left		
 						$("#content").animate({left:'0px'}, 1000, function() {
 							loadProjects();	
-							if($(window).scrollTop() !== 0 && scrolling==false) {	
+							if($(window).scrollTop() !== 0 && scrolling == false) {	
 								scrollTop();
 							}	
 						});
@@ -292,10 +287,11 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$("#content").stop(true).animate({left:'-110%'}, 1000, function() {
 					$('#content').load('projects.html #content', function() {
 						window.history.replaceState("", "", '/projects'); // comment out during development
-						enterContent_fromRight();
+						formatContent();
+						document.getElementById('content').style.left = docWidth + "px"; // enter content from right		
 						$("#content").animate({left:'0px'}, 1000, function() {
 							loadProjects();
-							if($(window).scrollTop() !== 0 && scrolling==false) {	
+							if($(window).scrollTop() !== 0 && scrolling == false) {	
 								scrollTop();
 							}		
 						});
