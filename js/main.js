@@ -208,7 +208,7 @@ function formatContent() {
 
 /* START: NAV CONTENT TRANSITIONS */
 $(".navbar-inverse .navbar-nav > li > a").click(function() { 
-	$("html, body").css("overflow", "visible");
+	$("html, body").css("overflow", "auto");
 	if (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length) {	
 		if ($(event.target).closest("#tab1").length && !$(this).closest('li').hasClass( "active" )) { // clicked on ABOUT
 			if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3") { // at CONTACT or PROJECTS
@@ -220,8 +220,6 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 						document.getElementById('content').style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:'0px'}, 1000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit					
 							loadAbout();
-							$("html, body").css("overflow", "hidden");
-							$("html, body").css("overflow", "visible");							
 							if ($(window).scrollTop() !== 0 && scrolling == false) {	
 								scrollTop();
 							}
