@@ -400,6 +400,8 @@ if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab
 	$(window).on('beforeunload', function() {
 		$(window).scrollTop(0);
 	});		
+	prepContent();
+	formatContent();
 	if ($('li.active a').attr('id') == "tab1") {
 		loadAbout();
 	} else if ($('li.active a').attr('id') == "tab3") {
