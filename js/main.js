@@ -328,8 +328,6 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			skipped=true;
 			$('#content').load('about.html #content', function() {
 				window.history.replaceState("", "", '/about');		
-				$("#content").css("display", "none");
-				$( "#content" ).fadeIn( "slow" );
 				$('.navbar-inverse').removeClass('slideIn');		
 				$("html, body").css("overflow", "");
 				loadAbout();
@@ -390,8 +388,6 @@ $(window).on("blur focus", function(e) {
 /* END: LEAVE PAGE */ 
 
 if ($('li.active a').attr('id') == "tab4" || $('li.active a').attr('id') == "tab3" || $('li.active a').attr('id') == "tab1") {
-	$("#content").css("display", "none");
-	$( "#content" ).fadeIn( "slow" );
 	$('.navbar-inverse').removeClass('slideIn');		
 	$("html, body").css("overflow", "");		
 	loadAbout();
