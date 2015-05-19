@@ -217,7 +217,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 					$('#content').load('about.html #content', function() {
 						window.history.replaceState("", "", '/about');  // comment out during development
 						formatContent();
-						document.getElementById('content').style.left = -docWidth + "px"; // enter content from left		
+						document.getElementById('content').style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:'0px'}, 1000, function(){ //.stop(true) isn't present here because it made it possible to glitch shit					
 							loadAbout();
 							if($(window).scrollTop() !== 0 && scrolling == false) {	
@@ -234,7 +234,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 					$('#content').load('about.html #content', function() {
 						window.history.replaceState("", "", '/about'); // comment out during development
 						formatContent();
-						document.getElementById('content').style.left = docWidth + "px"; // enter content from right
+						document.getElementById('content').style.left = window.innerWidth + "px"; // enter content from right
 						$("#content").animate({left:'0px'}, 1000, function() {						
 							loadAbout();	
 							if($(window).scrollTop() !== 0 && scrolling == false) {	
@@ -253,7 +253,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 					window.history.replaceState("", "", '/contact'); // comment out during development
 					formatContent();
 					document.getElementById('content').style.display = 'block';
-					document.getElementById('content').style.left = docWidth + "px"; // enter content from right		
+					document.getElementById('content').style.left = window.innerWidth + "px"; // enter content from right		
 					$("#content").animate({left:'0px'}, 1000, function() {	
 						loadContact();
 						if($(window).scrollTop() !== 0 && scrolling == false) {	
@@ -271,7 +271,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 					$('#content').load('projects.html #content', function() {
 						window.history.replaceState("", "", '/projects'); // comment out during development
 						formatContent();
-						document.getElementById('content').style.left = -docWidth + "px"; // enter content from left		
+						document.getElementById('content').style.left = -window.innerWidth + "px"; // enter content from left		
 						$("#content").animate({left:'0px'}, 1000, function() {
 							loadProjects();	
 							if($(window).scrollTop() !== 0 && scrolling == false) {	
@@ -288,7 +288,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 					$('#content').load('projects.html #content', function() {
 						window.history.replaceState("", "", '/projects'); // comment out during development
 						formatContent();
-						document.getElementById('content').style.left = docWidth + "px"; // enter content from right		
+						document.getElementById('content').style.left = window.innerWidth + "px"; // enter content from right		
 						$("#content").animate({left:'0px'}, 1000, function() {
 							loadProjects();
 							if($(window).scrollTop() !== 0 && scrolling == false) {	
