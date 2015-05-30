@@ -91,14 +91,15 @@ var scrollTop = function () {
 
 /* START: NAVBAR TOGGLE BTN */
 $(".navbar-toggle").click(function() {
-    if (!$("#tab4").is(":visible")) {
+    if ($( ".navbar-toggle" ).hasClass( "collapsed" )) {
 		$(this).addClass("menuActive");
-		 $( ".navbar-inverse" ).css( "opacity", "1" ); 
-	} else {		
+		$( ".navbar-inverse" ).css( "opacity", "1" ); 
+	} else {	
 		$(this).removeClass("menuActive");	
 		$( ".navbar-inverse" ).css( "opacity", "0.95" ); 
 	}	
 });
+
 $( ".navbar-toggle" )
 	.mouseover(function() {  
 		$(this).addClass("menuHover");

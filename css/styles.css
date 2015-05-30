@@ -40,21 +40,20 @@ body {
 .navbar-inverse .navbar-nav > .active > a:not(#tab2):not(#tab5):focus {
 	color: #ffffff;
 	background-color: #3B5998; 
-	/*text-decoration: underline;*/
 	cursor:pointer;
 }
 .navbar-inverse .navbar-toggle {
 	border-color:#3B5998;
 	background-color: #3B5998;	
+	padding: 10px 10px;
+	margin-top:10px;
+	margin-bottom:10px;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
 	background-color: #3B5998;
 }
-.menu {
-	border-color:#3B5998;
-	background-color: #3B5998;	
-}
+
 .menuHover {
 	background-color: #3B5998;
 	-webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -67,37 +66,45 @@ body {
 	-moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 	box-shadow: inset 0px 0px 7px #3D3D3D;
 }
+
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
   border-color: #ffffff; /* line separator nav from drop-down*/
 }
+
 #tab2, #tab5{
 	color:#ffffff;
 	background-color: #3B5998; 
 	height:55px; 
 }
+
 .navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5) {
-	color: #ffffff /* text color default */;
+	color: #ffffff;
 	transition-duration: 200ms;
 	cursor:pointer;
 	height:55px; 
 }
+
 .navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5):hover ,
 .navbar-inverse .navbar-nav > li > a:not(#tab2):not(#tab5):focus  {
-	color: #bdbcae; /* flash */
+	color: #bdbcae;
 	transition-duration: 200ms;
 	cursor:pointer;
 }
+
 .navbar-brand{
 	height:55px;
 	font-size:21px;
 }
+
 .navbar-inverse .navbar-brand {
 	color: #ffffff;
 }
-#music{
+
+#music {
 	float:right;
 }
+
 @media screen and (max-width:767px){
 	#music{
 		float:left;
@@ -115,7 +122,6 @@ span {
 }
 
 @media (min-width:768px) { 
-
 	.navbar > .container{
 	    text-align: center;
 	}
@@ -124,6 +130,7 @@ span {
 	    float: none;
 	    display: inline-block;
 	}
+	
 	.collapse.navbar-collapse {
 	    float: none;
 	    display: inline-block!important;
@@ -131,6 +138,10 @@ span {
 	    clear: none;
 		vertical-align: top;
 	}
+}
+
+.navbar-right {
+	margin-left:auto;
 }
 /* END: HEADER */
   
@@ -140,13 +151,13 @@ span {
    bottom:0;
    left:0;
    width:100%;
-   height:50px;   /* height of the footer */
+   height:50px; 
    background:#3B5998;  
    display:none;
    font-family: 'Lato', sans-serif;	
 }
 
-.static-footer .text-muted { /* text on left of footer */
+.static-footer .text-muted {
   color: #ffffff; 
   margin-top: 17px;
 }
@@ -155,9 +166,8 @@ span {
   margin-top: -35px;
 }
 
-
 .static-footer .fa-soundcloud, .static-footer .fa-stack-overflow, .static-footer .fa-github-alt, .static-footer .fa-linkedin {
-     color: #ffffff;/* (inherit = grey)*/
+     color: #ffffff;
 }
 
 .static-footer .fa-linkedin,.static-footer .fa-stack-overflow,.static-footer .fa-soundcloud {
@@ -215,23 +225,38 @@ a.writer.active{
 #projectheading{
 	color:#000000;
 }
-#blogimg {
-	width:500px;height:auto;float:right;clear:right;margin:0 0 30px 30px;
-}
-#websiteimg {
-	width:500px;height:auto;float:left;clear:left;margin:0 30px 30px 0;
+
+#blogimg, #drinkcup {
+	width:500px;
+	height:auto;	
+	float:right;
+	clear:right;
+	margin:0 0 30px 30px;
 }
 
-#drinkcup{
-	height:auto;width:500px;float:right;clear:right;margin:0 0 30px 30px;
+#websiteimg {
+	width:500px;
+	height:auto;
+	float:left;
+	clear:left;
+	margin:0 30px 30px 0;
 }
 
 #storyimg {
-	cursor:zoom-in;height:300px;width:250px;opacity:0.5;float:left;margin:0 30px 30px 0;
+	height:300px;
+	width:250px;
+	cursor:zoom-in;
+	opacity:0.5;
+	float:left;
+	margin:0 30px 30px 0;
 }
 
-#dave{
-	float:right; width:500px; height:auto; margin:0 0 30px 0;opacity:0;
+#dave {
+	float:right; 
+	width:500px; 
+	height:auto; 
+	margin:0 0 30px 0;
+	opacity:0;
 }
 
 #content-text a{
@@ -242,9 +267,11 @@ a.writer.active{
 	-o-transition:color 200ms ease;
 	transition: color 200ms ease;
 }
+
 #content-text a:hover,#content-text a:focus,#content-text a:active{
 	color:#f2777a;
 }
+
 #content-text{
 	font-size:14px;
 	font-weight:500px;
@@ -254,6 +281,7 @@ a.writer.active{
 #content-text .fa-stack-overflow,#content-text .fa-github-square,#content-text .fa-linkedin-square {
 	margin:0 0 0 15px;
 }
+
 @media screen and (max-width:767px){
 	#blogimg,#dave{
 		margin:0 0 30px 0;
