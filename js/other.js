@@ -1,4 +1,4 @@
-$(document).snowfall();			
+//$(document).snowfall();	
 
 function popup(){
 	playerWindow = window.open("http://michaelm-k.github.io/player", "player", "location=no,width=365,height=487");

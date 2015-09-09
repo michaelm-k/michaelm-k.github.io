@@ -5,7 +5,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="img/logo.png" /> 
 		<meta name="description" content="Michael Marek, software engineering student | University of Waterloo">
 		<meta charset="utf-8">
-		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>	
@@ -13,9 +13,9 @@
 		<link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet' type='text/css'>
 		
 		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/font-awesome.css" rel="stylesheet">
 		<link href="css/animate.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
-		<link href="css/font-awesome.css" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -44,77 +44,122 @@
 							<li><a id="tab5" href = "https://michaelxdave.herokuapp.com" target="_blank">BLOG</a></li>
 							<li><a id="tab4">CONTACT</a></li>
 							
-						</ul><!-- END: "nav navbar-nav navbar-right" -->
-					</div><!-- END: "collapse navbar-collapse navHeaderCollapse" -->
-				</div><!-- END: "container" -->
-			</div><!-- END: "navbar navbar-inverse navbar-fixed-top" -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="modal fade" id="imagemodal" tabindex="-1" >
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span>&times;</span><span class="sr-only">Close</span></button>
+						</div>
+						<div class="modal-body">
+							<img src="" id="imagepreview" style="width: 100%; height: auto;" >
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
 			
 			<div class="container pad-container">
-			
 				<div id = "content">
-				
 					<h2>Projects</h2>
+					
 					<hr>
 					
-					<div>			
-						<img id="blogimg" src="img/blog.png" class="img-responsive">
+					<div class="project-badge">			
+						<a id="consilio"><img src="img/consilio.png" class="project-image-right img-responsive" style="border-radius:5px"></a>
 						
-						<div id="content-text">
-							<h3 id="projectheading"><a href="https://michaelxdave.herokuapp.com" target="_blank"><strong>michael x dave</strong></a></h3>
-							<h4>Django, HTML, CSS, JS</h4>
+						<div class="content-text">
+							<h3 class="project_heading"><a href="https://michaelxdave.herokuapp.com" target="_blank"><strong>CONSIL.IO</strong></a></h3>
+							<h4>Express.js, socket.IO, Jade, SoundCloud API</h4>
 							
-							<p>A personal blogging application.</p>
+							<p><i>Real-time messaging. Real music. Together. At last.</i></p>
 							
-							<p>After a few months of holding my blog on WordPress, I decided to take control of my content and build a blog site from scratch, ultimately adapting and putting my own spin on the <a href="https://wordpress.com/themes/eighties/" target="_blank">Eighties</a> WordPress theme. As it stands, the actual blogging is a two-step process, as I first create and save my posts locally on Django's built-in SQLite database server, and then I push them to Heroku.</p>		
+							<p><b>CONSIL.IO</b> is a five-star chat hotel that prides itself on its simplicity and uptime.</p> 
+							<p>At <b>CONSIL.IO</b>, users are given the freedom to create and join rooms &mdash; public and private &mdash; and stream music from SoundCloud's vast catalogue &mdash; all at their expense-free leisure.</p>
 						</div>
 						
 						<hr style="clear:right">
 					</div>
 					
-					<div>			
-						<img id="websiteimg" src="img/website.png" class="img-responsive">
+					<div class="project-badge">			
+						<a id="rapitup"><img src="img/rapitup.png" class="project-image-left img-responsive" style="border-radius:5px"></a>
+						
+						<div class="content-text">
+							<h3 class="project_heading"><a href="https://rapitup.herokuapp.com" target="_blank"><strong>rapitup</strong></a></h3>
+							<h4>Ruby on Rails, <a href="https://github.com/collectiveidea/delayed_job">Delayed::Job</a></h4>
+							
+							<p><i>The Internet's youngest battle-rap platform.</i></p>
+							
+							<p>The funny thing is, you can never predict when or where a rap battle will take place when you're on the web. One could begin right after you log into Facebook, or over Twitter in the form of 140-character-long subtweets directed at <i>you</i>. Point being, you never know. And even though it's the sheer randomness of the rapping that makes it all the more fun, I wondered if it would be possible to capitalize on the phenomenon by giving it a home.</p>
+							<p>Anyway, on <b>rapitup</b> you can: write raps, respond to raps, win some, lose some, upvote, downvote &mdash; <b>all from behind a computer screen</b>. Cool, huh?</p>
+						</div>
+						
+						<hr style="clear:left">
+					</div>
 					
-						<div id="content-text">
-							<h3 id="projectheading"><strong>This Website</strong> <a href="https://github.com/michaelm-k/michaelm-k.github.io" target="_blank"><i class="fa fa-github"></i></a></h3>
-							<h4>AJAX, HTML, CSS, JS</h4>
+					<div class="project-badge">			
+						<img src="img/blog.png" class="project-image-right img-responsive" style="border-radius:25px">
+						
+						<div class="content-text">
+							<h3 class="project_heading"><a href="https://michaelxdave.herokuapp.com" target="_blank"><strong>michael x dave</strong></a></h3>
+							<h4>Django, HTML, CSS, JavaScript</h4>
 							
-							<p> My introduction to web development.</p>
+							<p><i>A personal blogging application.</i></p>
 							
-							<p>An animation-heavy, Bootstrapped static website that uses AJAX to asynchronously load content (i.e., no page refresh necessary!).</p>
+							<p>After a few months of holding my blog on WordPress, I decided to take control of my content and build a blog site from scratch, ultimately adapting and putting my own spin on the <a href="https://wordpress.com/themes/eighties/" target="_blank">Eighties</a> WordPress theme. As far as the actual content of my blog is concerned, you won't find anything on there other than a few posts about (my) life at UW, but if that's something that interests you, I'd recommend checking it out!</p>		
+						</div>
+						
+						<hr style="clear:right">
+					</div>
+					
+					<div class="project-badge">			
+						<img src="img/website.png" class="project-image-left img-responsive" style="border-radius:25px">
+					
+						<div class="content-text">
+							<h3 class="project_heading"><strong>This Website</strong> <a href="https://github.com/michaelm-k/michaelm-k.github.io" target="_blank"><i class="fa fa-github"></i></a></h3>
+							<h4>HTML, CSS, AJAX, JavaScript</h4>
 							
+							<p><i>My introduction to web development.</i></p>
+							
+							<p>An animation-heavy, Bootstrapped static website that uses AJAX to asynchronously load content (i.e., no page refresh necessary!).</p>			
 						</div>
 						
 						<hr style="clear:left">
 					</div>
 				
-					<div>
-						<img id="drinkcup" src="img/drinking_game.png" class="img-responsive">
+					<div class="project-badge">
+						<img src="img/drinking_game.png" class="project-image-right img-responsive">
 						
-						<div id="content-text">
-							<a href="http://michaelm-k.github.io/Drink-Cup" target="_blank"><h3 id="projectheading"><strong>Drink / Cup</strong></a> <a href="https://github.com/michaelm-k/Drink-Cup" target="_blank"><i class="fa fa-github"></i></a></h3>
-							<h4>HTML, CSS, JS</h4>
+						<div class="content-text">
+							<a href="http://michaelm-k.github.io/Drink-Cup" target="_blank"><h3 class="project_heading"><strong>Drink / Cup</strong></a> <a href="https://github.com/michaelm-k/Drink-Cup" target="_blank"><i class="fa fa-github"></i></a></h3>
+							<h4>HTML, CSS, JavaScript</h4>
 							
-							<p>An exercise of minimalisim, to say the least.
+							<p><i>An exercise of minimalisim, to say the least.</i></p>
 							
-							<p>After stumbling across a <a href="https://stackoverflow.com/questions/13772063/reveal-image-underneath-a-mask-css-javascript" target="_blank">Stack Overflow page</a> that showed how to use CSS to simulate a glass being filled with water, I felt like further sharpening my CSS skills by implementing the animation myself with a little more functionality: a <a href="https://bgrins.github.io/spectrum/" target="_blank">spectrum colorpicker</a> so that you can get creative with the colours you drink xD.</p>
+							<p>After stumbling across a <a href="https://stackoverflow.com/questions/13772063/reveal-image-underneath-a-mask-css-javascript" target="_blank">Stack Overflow question</a> that showed how to use CSS to simulate a glass being filled with water, I felt like further sharpening my CSS skills by implementing the animation myself with a little more functionality: a <a href="https://bgrins.github.io/spectrum/" target="_blank">spectrum colorpicker</a> so that you can get creative with the colours you drink xD.</p>
 						</div>
 						
 						<hr style="clear:right">
 					</div>
 					
-					<div>
-						<a href="Michael_Marek_Beneath_the_Sleeve.pdf" target="_blank"><img id='storyimg' src="img/story.png" class="img-responsive"></a>
+					<div class="project-badge">
+						<a href="Michael_Marek_Beneath_the_Sleeve.pdf" target="_blank"><img src="img/story.png" id="story_img" class="img-responsive"></a>
 						
-						<div id="content-text">
-							<h3 id="projectheading"><a href="Michael_Marek_Beneath_the_Sleeve.pdf" target="_blank"><strong>Published Short Story</strong></a></h3>
+						<div class="content-text">
+							<h3 class="project_heading"><a href="Michael_Marek_Beneath_the_Sleeve.pdf" target="_blank"><strong>Published Short Story</strong></a></h3>
 							<h4>English</h4>
 							
 							<p>Not coding-related, per se, but worth including nevertheless!</p>
 							<p>I submitted this story back in Grade 12 for the <a href="http://www.polarexpressions.ca/index.html" target="_blank">Polar Expressions Publishing</a> <strong>2013/2014 National Student Poetry and Short-Story Contest</strong>, and they were kind enough to publish it! So, shout out to them.</p>										
 							<p><i>Psst</i>. You can also click on the image to read the story.
 						</div>	
-					</div>
-				
+					</div>	
 				</div>
 
 				<div class="footer static-footer">
@@ -127,26 +172,26 @@
 							<a href="https://ca.linkedin.com/in/michaelmarek96" target="_blank"><i class = "fa fa-linkedin fa-2x"></i></a>
 							<a href="https://stackoverflow.com/users/3390922/reachmm" target="_blank"><i class = "fa fa-stack-overflow fa-2x"></i></a>
 							<a href="https://soundcloud.com/realmarem" target="_blank"><i class = "fa fa-soundcloud fa-2x"></i></a>
-						</div><!-- END: "text-primary pull-right" -->	
+						</div>	
 						
-					</div><!-- END: "container" -->	
-				</div><!-- END: "footer static-footer" -->	
-			</div><!-- END: "container pad-container" -->	
-		</div><!-- END: "custom-wrapper" -->	
+					</div>	
+				</div>	
+			</div>
+		</div>	
 		
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		
 		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="js/snowfall.js"></script>
+		<!-- <script type="text/javascript" src="js/snowfall.js"></script> -->
 		<script type="text/javascript" src="js/other.js"></script>	
 		
 		<!-- Google Analytics Tracking -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 					
 			ga('create', 'UA-62770660-2', 'auto');

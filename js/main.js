@@ -36,8 +36,7 @@ $(".navbar-inverse .navbar-brand").click(function() {
 		$(this).animate( {color: "#bdbcae"}, "200" );
 	} else {
 		$(this).animate( {color: "#ffffff"}, "50" ); 	
-	}
-	   
+	}	   
 });
 
 $( ".static-footer .fa-soundcloud, .static-footer .fa-stack-overflow, .static-footer .fa-github-alt, .static-footer .fa-linkedin" )
@@ -167,7 +166,7 @@ function loadAbout() {
 }
 
 function loadProjects() {
-	$( "#storyimg" )
+	$( "#story_img" )
 	.mouseover(function() { 
 		$(this).animate( {opacity: "1"}, 1000 ); 		
 	})
@@ -178,11 +177,10 @@ function loadProjects() {
 
 function loadContact() {
 	$("#dave").stop(true).animate( {opacity: "1"}, 2000); 	
-	$("#content-text .fa-diamond, #content-text .fa-stack-overflow, #content-text .fa-linkedin-square, #content-text .fa-github-square").addClass("animated rubberBand");
+	$(".content-text .fa-diamond, .content-text .fa-stack-overflow, .content-text .fa-linkedin-square, .content-text .fa-github-square").addClass("animated rubberBand");
 }
 
 function prepContent() {
-	event.preventDefault();
 	$( "#content" ).css( "position", "relative" ); 
 	$(".custom-wrapper").css("overflow", "hidden");
 }
@@ -195,7 +193,7 @@ function formatContent() {
 }
 
 /* START: NAV CONTENT TRANSITIONS */
-$(".navbar-inverse .navbar-nav > li > a").click(function() { 
+$(".navbar-inverse .navbar-nav > li > a").click(function(event) { 
 	$("html, body").css("overflow", "visible");	
 	if ($(this).closest("li").hasClass("active") && (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length)) { 
 		if ($(window).scrollTop() !== 0 && scrolling==false) {	
@@ -204,6 +202,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 	} else if (!$(event.target).closest("#tab2").length && !$(event.target).closest("#tab5").length) {
 		if ($(event.target).closest("#tab1").length && !$(this).closest("li").hasClass( "active" )) { // clicked on ABOUT
 			if ($("li.active a").attr("id") == "tab4" || $("li.active a").attr("id") == "tab3") { // at CONTACT or PROJECTS
+				event.preventDefault();
 				prepContent();
 				$("#content").stop(true).animate({left:"+110%"}, 1000, function() {
 					$("#content").load("about.html #content", function() {
@@ -221,6 +220,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$("li").removeClass( "active" );
 				$(this).closest("li").addClass( "active" );		
 			} else { // at home
+				event.preventDefault();
 				prepContent();
 				$("#content").stop(true).animate({left:"-110%"}, 1000, function() {
 					$("#content").load("about.html #content", function() {
@@ -239,6 +239,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$(this).closest("li").addClass( "active" );
 			}				
 		} else if ($(event.target).closest("#tab4").length && !$(this).closest("li").hasClass( "active" )) { // clicked on CONTACT
+			event.preventDefault();
 			prepContent();
 			$("#content").stop(true).animate({left:"-110%"}, 1000, function() {
 				$("#content").load("contact.html #content", function() {
@@ -258,6 +259,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 			$(this).closest("li").addClass( "active" );
 		} else if ($(event.target).closest("#tab3").length && !$(this).closest("li").hasClass( "active" )) { // clicked on PROJECTS
 			if ($("li.active a").attr("id") == "tab4") { // at CONTACT
+				event.preventDefault();
 				prepContent();
 				$("#content").stop(true).animate({left:"+110%"}, 1000, function() {
 					$("#content").load("projects.html #content", function() {
@@ -275,6 +277,7 @@ $(".navbar-inverse .navbar-nav > li > a").click(function() {
 				$("li").removeClass( "active" );
 				$(this).closest("li").addClass( "active" );
 			} else { // at ABOUT or home
+				event.preventDefault();
 				prepContent();
 				$("#content").stop(true).animate({left:"-110%"}, 1000, function() {
 					$("#content").load("projects.html #content", function() {
@@ -409,3 +412,9 @@ if ($("li.active a").attr("id") == "tab4" || $("li.active a").attr("id") == "tab
 		}		
 	}, 15500);
 }
+
+$("#consilio, #rapitup").on("click", function() {
+   var id = $(this).attr('id');
+   $('#imagepreview').attr('src', $('#' + id + ' img').attr('src')); // here asign the image to the modal when the user click the enlarge link
+   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+});

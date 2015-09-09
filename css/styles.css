@@ -17,6 +17,14 @@ body {
   padding-bottom:80px; /*height of the footer plus a little */
 }
 
+#content {
+	font-family: 'Adamina', serif;
+}
+
+#name{
+	opacity:0;
+}
+
 /* START: HEADER */
 .navbar-inverse {
   background-color:#3B5998;
@@ -189,14 +197,6 @@ a.writer.active{
 	 color:#3B5998;	 
 }
 
-#content{
-	font-family: 'Adamina', serif;
-}
-
-#name{
-	opacity:0;
-}
-
 .skip_intro{
 	opacity:0;
 	text-decoration:none;
@@ -211,7 +211,34 @@ a.writer.active{
 }
 /* END: HOME */
 
-.aboutimg{
+.project_heading{
+	color:#000000;
+}
+
+.content-text a{
+	color:black;
+	text-decoration:none;
+	-webkit-transition:color 200ms ease;
+	-moz-transition:color 200ms ease;
+	-o-transition:color 200ms ease;
+	transition: color 200ms ease;
+}
+
+.content-text a:hover,.content-text a:focus,.content-text a:active{
+	color:#f2777a;
+}
+
+.content-text{
+	font-size:14px;
+	font-weight:500px;
+	line-height:2.0;
+}
+
+.content-text .fa-stack-overflow,.content-text .fa-github-square,.content-text .fa-linkedin-square {
+	margin:0 0 0 15px;
+}
+
+.aboutimg {
 	float:right;padding-left:20px;
 }
 
@@ -222,11 +249,7 @@ a.writer.active{
 	display:block;text-decoration: none;color: #bdbcae;font-style:italic;opacity:0;
 }
 
-#projectheading{
-	color:#000000;
-}
-
-#blogimg, #drinkcup {
+.project-image-right {
 	width:500px;
 	height:auto;	
 	float:right;
@@ -234,7 +257,7 @@ a.writer.active{
 	margin:0 0 30px 30px;
 }
 
-#websiteimg {
+.project-image-left {
 	width:500px;
 	height:auto;
 	float:left;
@@ -242,7 +265,23 @@ a.writer.active{
 	margin:0 30px 30px 0;
 }
 
-#storyimg {
+#consilio, #rapitup {
+	cursor:zoom-in;
+}
+
+@media (min-width: 768px) {
+	#imagemodal .modal-dialog {
+		width: 70%;
+	}
+}
+
+@media (max-width: 768px) {
+	#imagemodal .modal-dialog {
+		width: 97%;
+	}
+}
+
+#story_img {
 	height:300px;
 	width:250px;
 	cursor:zoom-in;
@@ -255,35 +294,12 @@ a.writer.active{
 	float:right; 
 	width:500px; 
 	height:auto; 
-	margin:0 0 30px 0;
+	margin:0 0 20px 0;
 	opacity:0;
 }
 
-#content-text a{
-	color:black;
-	text-decoration:none;
-	-webkit-transition:color 200ms ease;
-	-moz-transition:color 200ms ease;
-	-o-transition:color 200ms ease;
-	transition: color 200ms ease;
-}
-
-#content-text a:hover,#content-text a:focus,#content-text a:active{
-	color:#f2777a;
-}
-
-#content-text{
-	font-size:14px;
-	font-weight:500px;
-	line-height:2.0;
-}
-
-#content-text .fa-stack-overflow,#content-text .fa-github-square,#content-text .fa-linkedin-square {
-	margin:0 0 0 15px;
-}
-
-@media screen and (max-width:767px){
-	#blogimg,#dave{
+@media screen and (max-width:768px){
+	.project-image-right, #dave{
 		margin:0 0 30px 0;
 		float:none;padding-left:0;
 	}
