@@ -1,0 +1,22 @@
+html,
+body {
+	font-family: 'Nunito', sans-serif;
+	background-color: black;
+	color: #F8F8FF;
+}
+
+a {
+	color: #F8F8FF;
+	border-bottom: 1px solid white;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+#stuff {
+	font-size:15px;
+}
